@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 main(){
-    int rows,i,j,k;
+    int rows,i,j;
     cout<<"Enter number of rows: ";
     cin>>rows;
     for(i=1;i<=rows;i++){

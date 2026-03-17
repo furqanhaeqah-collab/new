@@ -5,7 +5,7 @@ main(){
     cout<<"Enter the number: ";
     cin>>number;
     cout<<"Enter the digit: ";
-    cin>>d;                      //d is the digit whose frequency we want to find
+    cin>>d;   //d is the digit whose frequency we want to find
     int freq=0;
     for(number;number>0;number=number/10){
         digit = number%10;
