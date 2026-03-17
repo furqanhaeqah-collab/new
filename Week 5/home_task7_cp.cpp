@@ -22,10 +22,9 @@ main(){
         else if((number>=600)&&(number<=799)){
             p4++;
         }
-        else if((number>=800)&&(number<=1000)){
+        else if(number>=800){
             p5++;
         }
-        
         percentage_p1=(p1/count)*100;
         percentage_p2=(p2/count)*100;
         percentage_p3=(p3/count)*100;

@@ -10,9 +10,9 @@ main(){
     cin>>num2;
     number1=num1,number2=num2;
     while(number2!=0){
-        int temp=number2;
+        int gcd_ans=number2;
         number2=number1%number2;
-        number1=temp;
+        number1=gcd_ans;
     }
     GCD=number1;
     LCM=(num1*num2)/GCD;

@@ -6,6 +6,6 @@ main(){
         for(col=5;col>=rows;col--){
             cout<<col;
         }
-        cout<<endl; 
+        cout<<endl;
     }
 }

@@ -9,7 +9,7 @@ main(){
     for(int y=1800;y<=y_last;y++){
         if(y%2==0){
             money=money-12000;
-        } 
+        }
         else{
             money=money-(12000+50*age);
         }
