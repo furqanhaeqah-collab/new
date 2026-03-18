@@ -3,7 +3,7 @@ using namespace std;
 main(){
     char word[100];
     cout<<"Enter a string: ";
-    cin>>word;
+    cin.getline(word,100);
     for(int index=0;word[index]!='\0';index++){
         if(word[index]=='z'){
             word[index]='a';
