@@ -9,6 +9,7 @@ main(){
     for(int i=0;i<count;i++){
         cin>>array[i];
     }
+    int size=0;
     cout<<"Students in alphabetical order: "<<endl;
     for(int j=0;j<count-1;j++){
         for(int k=0;k<count-j-1;k++){
@@ -19,8 +20,6 @@ main(){
             }
         }
     }
-    for(int i=0;i<count;i++) {
-        cout<<array[i]<<endl;
+    for(int i=0;i<count;i++){
+        cout<<array[i]<<endl;}
     }
-    return 0;
-}
