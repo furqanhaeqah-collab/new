@@ -1,9 +1,9 @@
 #include<iostream>
 using namespace std;
 main(){
-    char word[100];
+    string word;
     cout<<"Enter a string: ";
-    cin.getline(word,100);
+    getline(cin,word);
     for(int index=0;word[index]!='\0';index++){
         if(word[index]=='z'){
             word[index]='a';

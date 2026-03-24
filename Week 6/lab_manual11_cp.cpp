@@ -1,9 +1,9 @@
 #include<iostream>
 using namespace std;
 main(){
-    char word[100];
+    string word;
     cout<<"Enter a string: ";
-    cin.getline(word,100);
+    getline(cin,word);
     cout<<"String with vowels removed: ";
     for(int i=0;word[i]!='\0';i++){
         if(word[i]!='a'&&word[i]!='e'&&word[i]!='o'&&word[i]!='u'

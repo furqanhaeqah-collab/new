@@ -1,15 +1,17 @@
 #include<iostream>
 using namespace std;
 main(){
-    char array[100];
+    string array;
     cout<<"Enter a string: ";
     cin>>array;
-    int i;
-    for(i=0;array[i]!='\0';i++){
-        i;
+    int i=0;
+    int ind;
+    while(array[i]!='\0'){
+        i++;
+        ind=i;
     }
     cout<<"Reversed string: ";
-    for(int index=i-1;index>=0;index--){
-        cout<<array[index];
+    for(int j=ind;j>=0;j--){
+        cout<<array[j];
     }
 }
