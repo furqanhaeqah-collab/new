@@ -7,7 +7,6 @@ main(){
     int array[size];
     int count=0;
     int num;
-    
     cout<<"Enter "<<size<<" numbers, one per line: "<<endl;
     for(int i=0;i<size;i++){ 
         cin>>num;
