@@ -1,9 +1,6 @@
 #include <iostream>
-
 #include <conio.h>
-
 using namespace std;
-
 main()
 {
     int total_students = 100, index = 14;
