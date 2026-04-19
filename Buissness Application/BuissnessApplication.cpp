@@ -32,7 +32,7 @@ main()
     string product_sale_on_array[length] = {"Yes", "No", "Yes", "No", "Yes", "No", "Yes", "No",
                                             "Yes", "No", "Yes", "No", "Yes", "No", "Yes", "Yes",
                                             "No", "Yes", "No", "Yes", "Yes", "No", "Yes", "No",
-                                            "Yes", "No", "Yes", "No", "Yes", "Yes"}; // "Sale" if product is on sale and "Not on Sale" if product is not on sale
+                                            "Yes", "No", "Yes", "No", "Yes", "Yes"}; // "Yes" if product is on sale and "No" if product is not on sale
     float product_sale_array[length] = {10, 0, 15, 0, 5, 0, 20, 0, 12, 0, 10, 0, 20, 0,
                                         15, 25, 0, 10, 0, 18, 10, 0, 15, 0, 20, 0, 5, 0, 12, 18}; // How much discount will be given
 
@@ -48,8 +48,8 @@ main()
     string order_status_array[length] = {"Delivered", "Pending", "Delivered", "Delivered", "Pending", "Pending", "Delivered", "Pending", "Delivered", "Delivered",
                                          "Pending", "Delivered", "Pending", "Pending", "Delivered", "Delivered", "Pending", "Delivered", "Pending", "Delivered",
                                          "Pending", "Delivered", "Delivered", "Pending", "Delivered", "Pending", "Pending", "Delivered", "Delivered", "Pending"};
-    int order_id_array[length] = {1023, 0, 2045, 0, 0, 3098, 4567, 0, 0, 5123, 0, 6789, 0, 7345, 0, 8456,
-                                  9567, 0, 0, 1122, 0, 2233, 0, 3344, 0, 4455, 5566, 0, 6677, 7788};
+    int order_id_array[length] = {1023, 1024, 2045, 3024, 4024, 3098, 4567, 1342, 1674, 5123, 3423, 6789, 3423, 7345, 2323, 8456,
+                                  9567, 4223, 1124, 1122, 5224, 2233, 5024, 3344, 2343, 4455, 5566, 2323, 6677, 7788};
     string coupon_code_array[length] = {"SAVE10A", "DISC20B", "OFFER30C", "SALE40D", "DEAL50E", "PROMO60F", "CUT70G", "LESS80H", "OFF90I", "BUY100J",
                                         "SAVE11K", "DISC22L", "OFFER33M", "SALE44N", "DEAL55O", "PROMO66P", "CUT77Q", "LESS88R", "OFF99S", "BUY10T",
                                         "SAVE21U", "DISC32V", "OFFER43W", "SALE54X", "DEAL65Y", "PROMO76Z", "CUT87A1", "LESS98B2", "OFF19C3", "BUY20D4",
@@ -637,7 +637,7 @@ main()
                      << "2.Search Product" << endl
                      << "3.Add product to cart" << endl
                      << "4.View Cart" << endl
-                     << "5.Buy a Product" << endl
+                     << "5.View categorized product" << endl
                      << "6.Track Order" << endl
                      << "7.Send Feedback" << endl
                      << "8.Send Rating" << endl
@@ -648,18 +648,21 @@ main()
                 cin >> customer_choice;
                 if (customer_choice == 1)
                 {
-                    // Code for View Products
+                    // Code for View All Products
+                    system("cls");
                     for (int number = 0; number < index; number++)
                     {
                         cout << "Product Name\tProduce ID\tPrice\tAvailability\tDiscounted Price" << endl;
                         cout << product_name_array[number] << "\t" << product_code_array[number] << "\t" << product_price_array[number] << "\t"
                              << product_available_array[number] << "\t" << product_sale_array[number] << endl;
+                        getch();
                     }
                 }
                 else if (customer_choice == 2)
                 {
                     // Code for Search Product
-                    cout << "Enter the Product ID you want to search: ";
+                    system("cls");
+                    cout << "Enter the Product ID: ";
                     string product_code;
                     cin.ignore();
                     getline(cin, product_code);
@@ -676,7 +679,7 @@ main()
                     if (is_found == false)
                     {
                         cout << "Invalid credentials" << endl
-                             << "Try again";
+                             << "Try again" << endl;
                         getch();
                     }
                     else
@@ -684,11 +687,13 @@ main()
                         cout << "Product Name\tProduce ID\tPrice\tAvailability\tDiscounted Price" << endl;
                         cout << product_name_array[found_index] << "\t" << product_code_array[found_index] << "\t" << product_price_array[found_index] << "\t"
                              << product_available_array[found_index] << "\t" << product_sale_array[found_index] << endl;
+                        getch();
                     }
                 }
                 else if (customer_choice == 3)
                 {
                     // Code for Add Product in Cart
+                    system("cls");
                     cout << "Enter the Product ID: ";
                     string product_code;
                     cin.ignore();
@@ -714,11 +719,13 @@ main()
                     {
                         customer_cart_array[found_index] = product_code_array[found_index];
                         cout << "Product successfully added to cart" << endl;
+                        getch();
                     }
                 }
                 else if (customer_choice == 4)
                 {
                     // Code for Go to Cart
+                    system("cls");
                     cout << "Enter the Product ID: ";
                     string product_code;
                     cin.ignore();
@@ -747,6 +754,8 @@ main()
                         // Step 3:View Product price
                         // Step 4:Add a coupon
                         // Step 5:View Discounted Price
+                        // Step 6:Place Order
+                        system("cls");
                         cout << "Product ID: \t" << product_code_array[found_index] << endl;
                         cout << "Product name: \t" << product_name_array[found_index] << endl;
                         cout << "Product price before coupon discount: \t" << product_price_array[found_index] << endl;
@@ -755,7 +764,7 @@ main()
                         cin >> coupon_code;
                         bool is_found_code = false;
                         int found_code_index = 0;
-                        for (int i = 0; i < index; i++)
+                        for (int i = 0; i < length; i++)
                         {
                             if (coupon_code_array[i] == coupon_code)
                             {
@@ -771,56 +780,68 @@ main()
                         else
                         {
                             product_price_after_coupon_discount_array[found_code_index] = product_price_array[found_code_index] - (product_price_array[found_code_index] * (coupon_code_discount_array[found_code_index] / 100));
+                            for (int i = 0; i < count; i++)
+                            {
+                                cout << "Customer Credentials" << endl;
+                                cout << "Enter your Name: ";
+                                cin >> customer_name_array[i];
+                                cout << "Enter your Email: ";
+                                cin >> customer_email_array[i];
+                                cout << "@gmail.com" << endl;
+                                cout << "Enter your postal code: ";
+                                cin >> customer_postal_code_array[i];
+                                cout << "Product ID:\t" << customer_buy_array[found_index] << endl;
+                            }
                             cout << "Enter the price after discount: " << product_price_after_coupon_discount_array[found_code_index] << endl;
+                            customer_buy_array[found_index] = product_code_array[found_index];
+                            cout << "Product ordered successfully" << endl;
+                            cout << "Your order ID is: " << order_id_track_array[found_index] << endl;
+                            getch();
                         }
                     }
                 }
                 else if (customer_choice == 5)
                 {
-                    // Code for Buying a Product
-                    cout << "Enter the Product ID: ";
-                    string product_code;
-                    cin.ignore();
-                    getline(cin, product_code);
-                    int found_index = 0;
-                    bool is_found = false;
-                    for (int i = 0; i < index; i++)
+                    // Code for view categorized product
+                    system("cls");
+                    cout << "Enter the Category of the product: ";
+                    string category;
+                    cin >> category;
+                    for (int product_no = 0; product_no < index; product_no++)
                     {
-                        if (product_code_array[i] == product_code)
+                        if (category == "Clothes")
                         {
-                            found_index = i;
-                            is_found = true;
+                            if (product_code_array[product_no][0] == 'C')
+                            {
+                                cout << "Product Name\tProduct ID\tProduct Price\tProduct In Stock" << endl;
+                                cout << product_name_array[product_no] << "\t" << product_code_array[product_no] << "\t"
+                                     << product_price_array << "\t" << product_available_array[product_no] << endl;
+                            }
                         }
-                    }
-                    if (is_found == false)
-                    {
-                        cout << "Invalid credentials" << endl
-                             << "Try again" << endl;
-                        getch();
-                    }
-                    else
-                    {
-                        customer_buy_array[found_index] = product_code_array[found_index];
-                        for (int i = 0; i < count; i++)
+                        else if (category == "Shoes")
                         {
-                            cout << "Customer Credentials" << endl;
-                            cout << "Enter your Name: ";
-                            cin >> customer_name_array[i];
-                            cout << "Enter your Email: ";
-                            cin >> customer_email_array[i];
-                            cout << "@gmail.com" << endl;
-                            cout << "Enter your postal code: ";
-                            cin >> customer_postal_code_array[i];
-                            cout << "Product ID:\t" << customer_buy_array[found_index] << endl;
+                            if (product_code_array[product_no][0] == 'S')
+                            {
+                                cout << "Product Name\tProduct ID\tProduct Price\tProduct In Stock" << endl;
+                                cout << product_name_array[product_no] << "\t" << product_code_array[product_no] << "\t"
+                                     << product_price_array << "\t" << product_available_array[product_no] << endl;
+                            }
                         }
-                        cout << "Product ordered successfully" << endl;
-                        cout << "Your order ID is: " << order_id_track_array[found_index] << endl;
-                        getch();
+                        else if (category == "Jewellery")
+                        {
+                            if (product_code_array[product_no][0] == 'J')
+                            {
+                                cout << "Product Name\tProduct ID\tProduct Price\tProduct In Stock" << endl;
+                                cout << product_name_array[product_no] << "\t" << product_code_array[product_no] << "\t"
+                                     << product_price_array << "\t" << product_available_array[product_no] << endl;
+                            }
+                        }
                     }
                 }
                 else if (customer_choice == 6)
                 {
                     // Code for Track Order
+                    system("cls");
                     cout << "Enter the Product ID you want to search: ";
                     string product_code;
                     cin.ignore();
@@ -838,7 +859,7 @@ main()
                     if (is_found == false)
                     {
                         cout << "Invalid credentials" << endl
-                             << "Try again";
+                             << "Try again" << endl;
                         getch();
                     }
                     else
@@ -846,19 +867,31 @@ main()
                         cout << "Enter your Order ID: ";
                         int order_id;
                         cin >> order_id;
-                        if (order_id_array[found_index] == order_id)
+                        bool order_found = false;
+                        int found_order_index = 0;
+                        for (int order_no = 0; order_no < length; order_no++)
                         {
-                            cout << "Order Status is: " << order_status_array[found_index] << endl;
+                            if (order_id_track_array[order_no] == order_id)
+                            {
+                                order_found = true;
+                                found_order_index = order_no;
+                            }
+                        }
+                        if (order_found == false)
+                        {
+                            cout << "Order not found...." << endl;
+                            getch();
                         }
                         else
                         {
-                            cout << "Order not found...." << endl;
+                            cout << "Order Status is: " << order_status_array[found_index] << endl;
                         }
                     }
                 }
                 else if (customer_choice == 7)
                 {
                     // Code for Send Feedback
+                    system("cls");
                     cout << "Enter the Product ID you want to send feedback of: ";
                     string product_code;
                     cin.ignore();
@@ -876,7 +909,7 @@ main()
                     if (is_found == false)
                     {
                         cout << "Invalid credentials" << endl
-                             << "Try again";
+                             << "Try again" << endl;
                         getch();
                     }
                     else
@@ -891,6 +924,7 @@ main()
                 else if (customer_choice == 8)
                 {
                     // Code for Send Rating
+                    system("cls");
                     cout << "Enter the Product ID you want to send rating of: ";
                     string product_code;
                     cin.ignore();
@@ -908,7 +942,7 @@ main()
                     if (is_found == false)
                     {
                         cout << "Invalid credentials" << endl
-                             << "Try again";
+                             << "Try again" << endl;
                         getch();
                     }
                     else
@@ -922,6 +956,7 @@ main()
                 else if (customer_choice == 9)
                 {
                     // Code for View Rating and feedback
+                    system("cls");
                     cout << "Enter the Product ID you want to send feedback of: ";
                     string product_code;
                     cin.ignore();
@@ -939,7 +974,7 @@ main()
                     if (is_found == false)
                     {
                         cout << "Invalid credentials" << endl
-                             << "Try again";
+                             << "Try again" << endl;
                         getch();
                     }
                     else
@@ -952,6 +987,7 @@ main()
                 else if (customer_choice == 10)
                 {
                     // Code for exit
+                    system("cls");
                     cout << "Exiting Customer Menu" << endl;
                     getch();
                     break;
@@ -959,6 +995,7 @@ main()
                 else
                 {
                     // code for invalid choice
+                    system("cls");
                     cout << "Invalid Choice" << endl;
                 }
                 cout << "Press any key to continue..." << endl;
