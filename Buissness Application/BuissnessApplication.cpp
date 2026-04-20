@@ -1,8 +1,6 @@
 // Libraries name
 #include <iostream>
 #include <conio.h>
-#include <windows.h>
-#include <cmath>
 using namespace std;
 
 // Main Function
@@ -118,6 +116,7 @@ main()
 
                     while (true)
                     {
+
                         // Code for Owner Menu
                         // 1.Add product, 2.Search Product, 3.Update Product, 4.Delete Product, 5.View Product,
                         // 6.Add sale on products, 7.Customer Feedback, 8.Show Pending Order,
@@ -142,6 +141,7 @@ main()
                         cin >> owner_choice;
                         if (owner_choice == 1)
                         {
+
                             // Code to Add Product
                             system("cls");
                             cout << "---Add a new Product---" << endl;
@@ -186,6 +186,7 @@ main()
                         }
                         else if (owner_choice == 2)
                         {
+
                             // Code to Search Product
                             system("cls");
                             cout << "Enter the code of product you want to search: ";
@@ -218,6 +219,7 @@ main()
                         }
                         else if (owner_choice == 3)
                         {
+
                             // Code to Update Product
                             system("cls");
                             cout << "Enter the code of product you want to update: ";
@@ -286,6 +288,7 @@ main()
                         }
                         else if (owner_choice == 4)
                         {
+
                             // Code to View Products
                             // View Produt Menu
                             // 1. All Products
@@ -318,6 +321,7 @@ main()
                                 }
                                 else if (view_product_choice == 2)
                                 {
+
                                     // Code to View In-Stock Product
                                     for (int view_index = 0; view_index < index; view_index++)
                                     {
@@ -333,6 +337,7 @@ main()
                                 }
                                 else if (view_product_choice == 3)
                                 {
+
                                     // Code to View Out of Stock Product
                                     for (int view_index = 0; view_index < index; view_index++)
                                     {
@@ -348,6 +353,7 @@ main()
                                 }
                                 else if (view_product_choice == 4)
                                 {
+
                                     // Code to View Products on Sale
                                     for (int view_index = 0; view_index < index; view_index++)
                                     {
@@ -363,6 +369,7 @@ main()
                                 }
                                 else if (view_product_choice == 5)
                                 {
+
                                     // Code to Exit
                                     cout << "Exiting view Product Menu" << endl;
                                     getch();
@@ -375,6 +382,7 @@ main()
                         }
                         else if (owner_choice == 5)
                         {
+
                             // Code to Delete Product
                             system("cls");
                             cout << "Enter the code of product you want to delete: ";
@@ -409,6 +417,7 @@ main()
                         }
                         else if (owner_choice == 6)
                         {
+
                             // Code to Add Product on sale
                             system("cls");
                             cout << "Enter the code of product you want to put sale on: ";
@@ -457,6 +466,7 @@ main()
                         }
                         else if (owner_choice == 7)
                         {
+
                             // Code to View Customer Feedback
                             system("cls");
                             cout << "Enter the code of the product of which you want to view feedback: ";
@@ -482,6 +492,7 @@ main()
                             }
                             else
                             {
+
                                 // Code to view feedbacks
                                 cout << "Feedback on " << product_code_array[found_index] << " is: " << endl
                                      << product_feedback_array[found_index] << endl;
@@ -489,6 +500,7 @@ main()
                         }
                         else if (owner_choice == 8)
                         {
+
                             // Code to Show Product Rating
                             system("cls");
                             cout << "Enter the code of the product of which you want to view ratings: ";
@@ -513,6 +525,7 @@ main()
                             }
                             else
                             {
+
                                 // Code to view feedbacks
                                 cout << "Rating of " << product_code_array[found_index] << " is: " << endl
                                      << product_rating_array[found_index] << endl;
@@ -520,6 +533,7 @@ main()
                         }
                         else if (owner_choice == 9)
                         {
+
                             // Code to Show pending Orders
                             system("cls");
                             while (index != 0)
@@ -534,6 +548,7 @@ main()
                         }
                         else if (owner_choice == 10)
                         {
+
                             // Code to Show Delievered Orders
                             system("cls");
                             while (index != 0)
@@ -548,6 +563,7 @@ main()
                         }
                         else if (owner_choice == 11)
                         {
+
                             // Code to Update Order Status
                             system("cls");
                             cout << "Enter the code of the product of which you want to update: ";
@@ -589,6 +605,7 @@ main()
                         }
                         else if (owner_choice == 12)
                         {
+
                             // Code to exit
                             cout << "Exiting Owner Menu" << endl;
                             getch();
@@ -596,6 +613,7 @@ main()
                         }
                         else
                         {
+
                             // Code for worng choice
                             cout << "Invalid option selected" << endl;
                         }
@@ -606,12 +624,15 @@ main()
                 }
                 else
                 {
+
+                    // For worng credentials
                     cout << "Invalid Username or password" << endl;
                 }
                 cout << "Press any key to continue" << endl;
                 getch();
             }
         }
+
         // If Choice is 2 from System Menu
         else if (choice == 2)
         {
@@ -628,6 +649,7 @@ main()
             count++;
             while (true)
             {
+
                 // Code for Customer Menu
                 // 1.View Products, 2.Search Product, 3.Add product in cart, 4.Buy a Product, 5.Go to Cart 6.Track Order
                 // 7.Send Feedback, 8.Send Rating, 9.View Rating 10.Exit
@@ -638,16 +660,19 @@ main()
                      << "3.Add product to cart" << endl
                      << "4.View Cart" << endl
                      << "5.View categorized product" << endl
-                     << "6.Track Order" << endl
-                     << "7.Send Feedback" << endl
-                     << "8.Send Rating" << endl
-                     << "9.View Rating and Feedbacks" << endl
-                     << "10.Exit" << endl;
+                     << "6.View Prdoucts with prices sorted(highest to lowest)" << endl
+                     << "7.View Prdoucts with prices sorted(lowest to highest)" << endl
+                     << "8.Track Order" << endl
+                     << "9.Send Feedback" << endl
+                     << "10.Send Rating" << endl
+                     << "11.View Rating and Feedbacks" << endl
+                     << "12.Exit" << endl;
                 cout << "Enter your choice: ";
                 int customer_choice = 0;
                 cin >> customer_choice;
                 if (customer_choice == 1)
                 {
+
                     // Code for View All Products
                     system("cls");
                     for (int number = 0; number < index; number++)
@@ -660,6 +685,7 @@ main()
                 }
                 else if (customer_choice == 2)
                 {
+
                     // Code for Search Product
                     system("cls");
                     cout << "Enter the Product ID: ";
@@ -692,6 +718,7 @@ main()
                 }
                 else if (customer_choice == 3)
                 {
+
                     // Code for Add Product in Cart
                     system("cls");
                     cout << "Enter the Product ID: ";
@@ -724,6 +751,7 @@ main()
                 }
                 else if (customer_choice == 4)
                 {
+
                     // Code for Go to Cart
                     system("cls");
                     cout << "Enter the Product ID: ";
@@ -748,6 +776,7 @@ main()
                     }
                     else
                     {
+
                         // Cart Menu
                         // Step 1:View Product ID
                         // Step 2:View Product name
@@ -802,6 +831,7 @@ main()
                 }
                 else if (customer_choice == 5)
                 {
+
                     // Code for view categorized product
                     system("cls");
                     cout << "Enter the Category of the product: ";
@@ -840,6 +870,65 @@ main()
                 }
                 else if (customer_choice == 6)
                 {
+
+                    // Code for view products from highest to lowest price
+                    system("cls");
+
+                    // Applying bubble sort sorting mechanism
+                    for (int bubblesort1 = 0; bubblesort1 < length - 1; bubblesort1++)
+                    {
+                        for (int bubblesort2 = 0; bubblesort2 < length - bubblesort2 - 1; bubblesort2++)
+                        {
+                            if (product_price_array[bubblesort2] < product_price_array[bubblesort2 + 1])
+                            {
+                                int swap_price = product_price_array[bubblesort2];
+                                product_price_array[bubblesort2] = product_price_array[bubblesort2 + 1];
+                                product_price_array[bubblesort2 + 1] = swap_price;
+                            }
+                        }
+                    }
+
+                    // Code to view sorted products
+                    for (int sort = 0; sort < index; sort++)
+                    {
+                        cout << "Product Name\tProduct ID\tProduct Price\tProduct Availibility" << endl;
+                        cout << product_name_array[sort] << "\t" << product_code_array[sort] << "\t"
+                             << product_price_array[sort] << "\t" << product_available_array[sort] << endl;
+                    }
+                    getch();
+                }
+                else if (customer_choice == 7)
+                {
+
+                    // Code for view product from lowest to highest price
+                    system("cls");
+
+                    // Applying bubble sort sorting mechanism
+                    for (int bubblesort1 = 0; bubblesort1 < length - 1; bubblesort1++)
+                    {
+                        for (int bubblesort2 = 0; bubblesort2 < length - bubblesort1 - 1; bubblesort2++)
+                        {
+                            if (product_price_array[bubblesort2] > product_price_array[bubblesort2+1])
+                            {
+                                int swap_price = product_price_array[bubblesort2];
+                                product_price_array[bubblesort2] = product_price_array[bubblesort2 + 1];
+                                product_price_array[bubblesort2 + 1] = swap_price;
+                            }
+                        }
+                    }
+
+                    // Code to view sorted products
+                    for (int sort = 0; sort < index; sort++)
+                    {
+                        cout << "Product Name\tProduct ID\tProduct Price\tProduct Availibility" << endl;
+                        cout << product_name_array[sort] << "\t" << product_code_array[sort] << "\t"
+                             << product_price_array[sort] << "\t" << product_available_array[sort] << endl;
+                    }
+                    getch();
+                }
+                else if (customer_choice == 8)
+                {
+
                     // Code for Track Order
                     system("cls");
                     cout << "Enter the Product ID you want to search: ";
@@ -888,8 +977,9 @@ main()
                         }
                     }
                 }
-                else if (customer_choice == 7)
+                else if (customer_choice == 9)
                 {
+
                     // Code for Send Feedback
                     system("cls");
                     cout << "Enter the Product ID you want to send feedback of: ";
@@ -921,8 +1011,9 @@ main()
                         product_feedback_array[found_index] = product_feedback;
                     }
                 }
-                else if (customer_choice == 8)
+                else if (customer_choice == 10)
                 {
+
                     // Code for Send Rating
                     system("cls");
                     cout << "Enter the Product ID you want to send rating of: ";
@@ -953,8 +1044,9 @@ main()
                         product_rating_array[found_index] = product_rating;
                     }
                 }
-                else if (customer_choice == 9)
+                else if (customer_choice == 11)
                 {
+
                     // Code for View Rating and feedback
                     system("cls");
                     cout << "Enter the Product ID you want to send feedback of: ";
@@ -984,8 +1076,9 @@ main()
                              << product_rating_array[found_index] << "\t" << product_feedback_array[found_index] << endl;
                     }
                 }
-                else if (customer_choice == 10)
+                else if (customer_choice == 12)
                 {
+
                     // Code for exit
                     system("cls");
                     cout << "Exiting Customer Menu" << endl;
@@ -994,6 +1087,7 @@ main()
                 }
                 else
                 {
+
                     // code for invalid choice
                     system("cls");
                     cout << "Invalid Choice" << endl;
@@ -1002,6 +1096,7 @@ main()
                 getch();
             }
         }
+
         // If chice is 3 from System Menu#
         else if (choice == 3)
         {
@@ -1010,6 +1105,7 @@ main()
             getch();
             break;
         }
+
         // If choice is any other number
         else
         {

@@ -1,14 +1,22 @@
 #include <iostream>
 using namespace std;
-void IsSymmetrical(int num);
+bool IsSymmetrical(int num);
 main()
 {
     int n;
     cout << "Enter a three digit number: ";
     cin >> n;
-    IsSymmetrical(n);
+    bool result = IsSymmetrical(n);
+    if (result == false)
+    {
+        cout << "Number is not symmetrical";
+    }
+    else
+    {
+        cout << "Number is Symmetrical";
+    }
 }
-void IsSymmetrical(int n)
+bool IsSymmetrical(int n)
 {
     // To know if number is symmetrical or not
     int temp = n, rn = 0;
@@ -18,12 +26,14 @@ void IsSymmetrical(int n)
         rn = (rn * 10) + mod;
         temp = temp / 10;
     }
+    bool symmetrical = false;
     if (n == rn)
     {
-        cout << "The number is Symmetrical";
+        symmetrical = true;
     }
-    else if (rn != n)
+    else
     {
-        cout << "The number is not Symmetrical";
+        symmetrical = false;
     }
+    return symmetrical;
 }
