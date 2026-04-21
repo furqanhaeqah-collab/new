@@ -31,8 +31,8 @@ main()
                                             "Yes", "No", "Yes", "No", "Yes", "No", "Yes", "Yes",
                                             "No", "Yes", "No", "Yes", "Yes", "No", "Yes", "No",
                                             "Yes", "No", "Yes", "No", "Yes", "Yes"}; // "Yes" if product is on sale and "No" if product is not on sale
-    float product_sale_array[length] = {10, 0, 15, 0, 5, 0, 20, 0, 12, 0, 10, 0, 20, 0,
-                                        15, 25, 0, 10, 0, 18, 10, 0, 15, 0, 20, 0, 5, 0, 12, 18}; // How much discount will be given
+    float product_sale_array[length] = {10, 0, 15, 0, 5, 0, 20, 0, 10, 0, 10, 0, 20, 0,
+                                        15, 20, 0, 10, 0, 15, 10, 0, 15, 0, 20, 0, 5, 0, 12, 15}; // How much discount will be given
 
     string product_feedback_array[length] = {"Excellent quality and very comfortable.", "Good fabric but a bit expensive.", "Average stitching, expected better.",
                                              "Very stylish and perfect fit.", "Color faded after one wash.", "Highly recommended, worth the price.",
@@ -264,10 +264,10 @@ main()
                                 string product_sale_on;
                                 cin >> product_sale_on;
                                 float product_sale, product_discount;
+                                float sale;
                                 if (product_sale_on == "Yes")
                                 {
                                     cout << "Enter the amount of discount: ";
-                                    float sale;
                                     cin >> sale;
                                     product_discount = (product_price * (sale / 100));
                                 }
@@ -312,10 +312,12 @@ main()
                                     // Code to View All Products
                                     for (int view_index = 0; view_index < index; view_index++)
                                     {
+                                        int product_discounted_price_array[view_index];
+                                        product_discounted_price_array[view_index] = product_price_array[view_index] - (product_price_array[view_index] * (product_sale_array[view_index] / 100));
                                         cout << "Name\t\tPrice\tCode\tAvalaibility\tOn Sale\tDiscounted Price" << endl;
                                         cout << product_name_array[view_index] << "\t" << product_price_array[view_index] << "\t"
                                              << product_code_array[view_index] << "\t" << product_available_array[view_index] << "\t\t"
-                                             << product_sale_on_array[view_index] << "\t" << product_sale_array[view_index] << endl;
+                                             << product_sale_on_array[view_index] << "\t" << product_discounted_price_array[view_index] << endl;
                                         getch();
                                     }
                                 }
@@ -327,10 +329,12 @@ main()
                                     {
                                         if (product_available_array[view_index] == "Yes")
                                         {
+                                            int product_discounted_price_array[view_index];
+                                            product_discounted_price_array[view_index] = product_price_array[view_index] - (product_price_array[view_index] * (product_sale_array[view_index] / 100));
                                             cout << "Name\t\tPrice\tCode\tAvalaibility\tOn Sale\tDiscounted Price" << endl;
                                             cout << product_name_array[view_index] << "\t" << product_price_array[view_index] << "\t"
                                                  << product_code_array[view_index] << "\t" << product_available_array[view_index] << "\t\t"
-                                                 << product_sale_on_array[view_index] << "\t" << product_sale_array[view_index] << endl;
+                                                 << product_sale_on_array[view_index] << "\t" << product_discounted_price_array[view_index] << endl;
                                             getch();
                                         }
                                     }
@@ -343,10 +347,13 @@ main()
                                     {
                                         if (product_available_array[view_index] == "No")
                                         {
+
+                                            int product_discounted_price_array[view_index];
+                                            product_discounted_price_array[view_index] = product_price_array[view_index] - (product_price_array[view_index] * (product_sale_array[view_index] / 100));
                                             cout << "Name\t\tPrice\tCode\tAvalaibility\tOn Sale\tDiscounted Price" << endl;
                                             cout << product_name_array[view_index] << "\t" << product_price_array[view_index] << "\t"
                                                  << product_code_array[view_index] << "\t" << product_available_array[view_index] << "\t\t"
-                                                 << product_sale_on_array[view_index] << "\t" << product_sale_array[view_index] << endl;
+                                                 << product_sale_on_array[view_index] << "\t" << product_discounted_price_array[view_index] << endl;
                                             getch();
                                         }
                                     }
@@ -359,10 +366,13 @@ main()
                                     {
                                         if (product_sale_on_array[view_index] == "Yes")
                                         {
+
+                                            int product_discounted_price_array[view_index];
+                                            product_discounted_price_array[view_index] = product_price_array[view_index] - (product_price_array[view_index] * (product_sale_array[view_index] / 100));
                                             cout << "Name\t\tPrice\tCode\tAvalaibility\tOn Sale\tDiscounted Price" << endl;
                                             cout << product_name_array[view_index] << "\t" << product_price_array[view_index] << "\t"
                                                  << product_code_array[view_index] << "\t" << product_available_array[view_index] << "\t\t"
-                                                 << product_sale_on_array[view_index] << "\t" << product_sale_array[view_index] << endl;
+                                                 << product_sale_on_array[view_index] << "\t" << product_discounted_price_array[view_index] << endl;
                                             getch();
                                         }
                                     }
@@ -371,12 +381,15 @@ main()
                                 {
 
                                     // Code to Exit
+                                    system("cls");
                                     cout << "Exiting view Product Menu" << endl;
                                     getch();
+                                    break;
                                 }
                                 else
                                 {
                                     cout << "Invalid Choice" << endl;
+                                    getch();
                                 }
                             }
                         }
@@ -657,11 +670,11 @@ main()
                 cout << "----Customer Menu----" << endl;
                 cout << "1.View Product" << endl
                      << "2.Search Product" << endl
-                     << "3.Add product to cart" << endl
-                     << "4.View Cart" << endl
-                     << "5.View categorized product" << endl
-                     << "6.View Prdoucts with prices sorted(highest to lowest)" << endl
-                     << "7.View Prdoucts with prices sorted(lowest to highest)" << endl
+                     << "3.View categorized product" << endl
+                     << "4.View Prdoucts with prices(highest to lowest)" << endl
+                     << "5.View Prdoucts with prices(lowest to highest)" << endl
+                     << "6.Add product to cart" << endl
+                     << "7.Buy a product" << endl
                      << "8.Track Order" << endl
                      << "9.Send Feedback" << endl
                      << "10.Send Rating" << endl
@@ -719,6 +732,121 @@ main()
                 else if (customer_choice == 3)
                 {
 
+                    // Code for view categorized product
+                    system("cls");
+                    cout << "Enter the Category of the product: ";
+                    string category;
+                    cin >> category;
+                    for (int product_no = 0; product_no < index; product_no++)
+                    {
+                        if (category == "Clothes")
+                        {
+                            if (product_code_array[product_no][0] == 'C')
+                            {
+                                cout << "Product Name\tProduct ID\tProduct Price\tProduct In Stock" << endl;
+                                cout << product_name_array[product_no] << "\t" << product_code_array[product_no] << "\t"
+                                     << product_price_array << "\t" << product_available_array[product_no] << endl;
+                            }
+                        }
+                        else if (category == "Shoes")
+                        {
+                            if (product_code_array[product_no][0] == 'S')
+                            {
+                                cout << "Product Name\tProduct ID\tProduct Price\tProduct In Stock" << endl;
+                                cout << product_name_array[product_no] << "\t" << product_code_array[product_no] << "\t"
+                                     << product_price_array << "\t" << product_available_array[product_no] << endl;
+                            }
+                        }
+                        else if (category == "Jewellery")
+                        {
+                            if (product_code_array[product_no][0] == 'J')
+                            {
+                                cout << "Product Name\tProduct ID\tProduct Price\tProduct In Stock" << endl;
+                                cout << product_name_array[product_no] << "\t" << product_code_array[product_no] << "\t"
+                                     << product_price_array << "\t" << product_available_array[product_no] << endl;
+                            }
+                        }
+                    }
+                }
+                else if (customer_choice == 4)
+                {
+
+                    // Code for view products from highest to lowest price
+                    system("cls");
+
+                    // Applying bubble sort sorting mechanism
+                    for (int bubblesort1 = 0; bubblesort1 < length - 1; bubblesort1++)
+                    {
+                        for (int bubblesort2 = 0; bubblesort2 < length - bubblesort2 - 1; bubblesort2++)
+                        {
+                            if (product_price_array[bubblesort2] < product_price_array[bubblesort2 + 1])
+                            {
+                                string swap_name = product_name_array[bubblesort2];
+                                product_name_array[bubblesort2] = product_name_array[bubblesort2 + 1];
+                                product_name_array[bubblesort2 + 1] = swap_name;
+                                string swap_code = product_code_array[bubblesort2];
+                                product_code_array[bubblesort2] = product_code_array[bubblesort2 + 1];
+                                product_code_array[bubblesort2 + 1] = swap_code;
+                                int swap_price = product_price_array[bubblesort2];
+                                product_price_array[bubblesort2] = product_price_array[bubblesort2 + 1];
+                                product_price_array[bubblesort2 + 1] = swap_price;
+                                string swap_available = product_available_array[bubblesort2];
+                                product_available_array[bubblesort2] = product_available_array[bubblesort2 + 1];
+                                product_available_array[bubblesort2 + 1] = swap_available;
+                            }
+                        }
+                    }
+
+                    // Code to view sorted products
+                    for (int sort = 0; sort < index; sort++)
+                    {
+                        cout << "Product Name\tProduct ID\tProduct Price\tProduct Availibility" << endl;
+                        cout << product_name_array[sort] << "\t" << product_code_array[sort] << "\t"
+                             << product_price_array[sort] << "\t" << product_available_array[sort] << endl;
+                    }
+                    getch();
+                }
+                else if (customer_choice == 5)
+                {
+
+                    // Code for view product from lowest to highest price
+                    system("cls");
+
+                    // Applying bubble sort sorting mechanism
+                    for (int bubblesort1 = 0; bubblesort1 < index; bubblesort1++)
+                    {
+                        for (int bubblesort2 = 0; bubblesort2 < index - bubblesort1 - 1; bubblesort2++)
+                        {
+                            if (product_price_array[bubblesort2] < product_price_array[bubblesort1])
+                            {
+                                string swap_name = product_name_array[bubblesort2];
+                                product_name_array[bubblesort2] = product_name_array[bubblesort1];
+                                product_name_array[bubblesort1] = swap_name;
+                                string swap_code = product_code_array[bubblesort2];
+                                product_code_array[bubblesort2] = product_code_array[bubblesort1];
+                                product_code_array[bubblesort1] = swap_code;
+                                int swap_price = product_price_array[bubblesort2];
+                                product_price_array[bubblesort2] = product_price_array[bubblesort1];
+                                product_price_array[bubblesort1] = swap_price;
+                                string swap_available = product_available_array[bubblesort2];
+                                product_available_array[bubblesort2] = product_available_array[bubblesort1];
+                                product_available_array[bubblesort1] = swap_available;
+                            }
+                        }
+                    }
+
+                    // Code to view sorted products
+                    for (int sort = 0; sort < index; sort++)
+                    {
+                        cout << "Product Name\tProduct ID\tProduct Price\tProduct Availibility" << endl;
+                        cout << product_name_array[sort] << "\t" << product_code_array[sort] << "\t"
+                             << product_price_array[sort] << "\t" << product_available_array[sort] << endl;
+                    }
+                    getch();
+                }
+                else if (customer_choice == 6)
+                {
+
                     // Code for Add Product in Cart
                     system("cls");
                     cout << "Enter the Product ID: ";
@@ -749,10 +877,10 @@ main()
                         getch();
                     }
                 }
-                else if (customer_choice == 4)
+                else if (customer_choice == 7)
                 {
 
-                    // Code for Go to Cart
+                    // Code for Bying
                     system("cls");
                     cout << "Enter the Product ID: ";
                     string product_code;
@@ -828,103 +956,6 @@ main()
                             getch();
                         }
                     }
-                }
-                else if (customer_choice == 5)
-                {
-
-                    // Code for view categorized product
-                    system("cls");
-                    cout << "Enter the Category of the product: ";
-                    string category;
-                    cin >> category;
-                    for (int product_no = 0; product_no < index; product_no++)
-                    {
-                        if (category == "Clothes")
-                        {
-                            if (product_code_array[product_no][0] == 'C')
-                            {
-                                cout << "Product Name\tProduct ID\tProduct Price\tProduct In Stock" << endl;
-                                cout << product_name_array[product_no] << "\t" << product_code_array[product_no] << "\t"
-                                     << product_price_array << "\t" << product_available_array[product_no] << endl;
-                            }
-                        }
-                        else if (category == "Shoes")
-                        {
-                            if (product_code_array[product_no][0] == 'S')
-                            {
-                                cout << "Product Name\tProduct ID\tProduct Price\tProduct In Stock" << endl;
-                                cout << product_name_array[product_no] << "\t" << product_code_array[product_no] << "\t"
-                                     << product_price_array << "\t" << product_available_array[product_no] << endl;
-                            }
-                        }
-                        else if (category == "Jewellery")
-                        {
-                            if (product_code_array[product_no][0] == 'J')
-                            {
-                                cout << "Product Name\tProduct ID\tProduct Price\tProduct In Stock" << endl;
-                                cout << product_name_array[product_no] << "\t" << product_code_array[product_no] << "\t"
-                                     << product_price_array << "\t" << product_available_array[product_no] << endl;
-                            }
-                        }
-                    }
-                }
-                else if (customer_choice == 6)
-                {
-
-                    // Code for view products from highest to lowest price
-                    system("cls");
-
-                    // Applying bubble sort sorting mechanism
-                    for (int bubblesort1 = 0; bubblesort1 < length - 1; bubblesort1++)
-                    {
-                        for (int bubblesort2 = 0; bubblesort2 < length - bubblesort2 - 1; bubblesort2++)
-                        {
-                            if (product_price_array[bubblesort2] < product_price_array[bubblesort2 + 1])
-                            {
-                                int swap_price = product_price_array[bubblesort2];
-                                product_price_array[bubblesort2] = product_price_array[bubblesort2 + 1];
-                                product_price_array[bubblesort2 + 1] = swap_price;
-                            }
-                        }
-                    }
-
-                    // Code to view sorted products
-                    for (int sort = 0; sort < index; sort++)
-                    {
-                        cout << "Product Name\tProduct ID\tProduct Price\tProduct Availibility" << endl;
-                        cout << product_name_array[sort] << "\t" << product_code_array[sort] << "\t"
-                             << product_price_array[sort] << "\t" << product_available_array[sort] << endl;
-                    }
-                    getch();
-                }
-                else if (customer_choice == 7)
-                {
-
-                    // Code for view product from lowest to highest price
-                    system("cls");
-
-                    // Applying bubble sort sorting mechanism
-                    for (int bubblesort1 = 0; bubblesort1 < length - 1; bubblesort1++)
-                    {
-                        for (int bubblesort2 = 0; bubblesort2 < length - bubblesort1 - 1; bubblesort2++)
-                        {
-                            if (product_price_array[bubblesort2] > product_price_array[bubblesort2+1])
-                            {
-                                int swap_price = product_price_array[bubblesort2];
-                                product_price_array[bubblesort2] = product_price_array[bubblesort2 + 1];
-                                product_price_array[bubblesort2 + 1] = swap_price;
-                            }
-                        }
-                    }
-
-                    // Code to view sorted products
-                    for (int sort = 0; sort < index; sort++)
-                    {
-                        cout << "Product Name\tProduct ID\tProduct Price\tProduct Availibility" << endl;
-                        cout << product_name_array[sort] << "\t" << product_code_array[sort] << "\t"
-                             << product_price_array[sort] << "\t" << product_available_array[sort] << endl;
-                    }
-                    getch();
                 }
                 else if (customer_choice == 8)
                 {
