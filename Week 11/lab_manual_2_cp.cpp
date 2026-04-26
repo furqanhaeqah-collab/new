@@ -11,7 +11,7 @@ main()
     // Now the value can't be changed by anyone except yourself
     const int row_size = 5;
     const int col_size = 5;
-    int car[row_size][col_size] = {
+    int car[][col_size] = {
         {10, 7, 12, 10, 4},
         {18, 11, 15, 17, 2},
         {23, 19, 12, 16, 14},
