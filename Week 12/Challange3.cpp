@@ -8,7 +8,7 @@ void reverseByPointer(int arr[],int len);
 main()
 {
     int arr[] = {1, 2, 3, 4, 5};
-    int len = 5;
+    int len = sizeof(arr)/sizeof(arr[0]);
     reverseByPointer(arr,len);
 }
 
@@ -17,7 +17,7 @@ void reverseByPointer(int arr[],int len)
 {
     int *p = arr;
     cout << "Reversed Array: " << endl;
-    for (int i = len-1; i >= 0; i--)
+    for (int i = len; i >= 0; i--)
     {
         cout << *(p + i) << endl;
     }
