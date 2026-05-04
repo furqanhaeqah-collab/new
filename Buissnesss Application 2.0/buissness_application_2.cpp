@@ -78,7 +78,11 @@ string product_feedback_array[TOTAL_PRODUCT] = {"Excellent quality and very comf
                                                 "Amazing product, will buy again.", "Very comfortable for daily use.", "Stylish and affordable.",
                                                 "Good quality but size issue.", "Perfect for sports activities.", "Lightweight and durable.",
                                                 "Excellent leather finish.", "Cheap but not long lasting.", "Comfortable for summer wear.",
-                                                "Trendy design, loved it.", "Great cushioning and support."};
+                                                "Trendy design, loved it.", "Great cushioning and support.","The design is elegant.", 
+                                                "Great quality for the price.", "Lightweight and comfortable to wear.",
+                                                "The shine and finish give it a premium feel.", "Beautiful piece.",
+                                                "Packaging was neat and perfect for gifting.", "The color and polish have held up well.",
+                                                "Stylish and trendy, but durability could be improved.", "Overall a lovely accessory"};
 int product_rating_array[TOTAL_PRODUCT] = {5, 4, 3, 5, 2, 5, 3, 4, 3, 5, 5, 4, 3, 5,
                                            2, 5, 3, 4, 3, 5, 5, 4, 5, 4, 5, 4, 3, 5, 4, 5};
 string order_status_array[TOTAL_PRODUCT] = {"Delivered", "Pending", "Delivered", "Delivered", "Pending", "Pending", "Delivered", "Pending", "Delivered", "Delivered",
@@ -330,7 +334,7 @@ void mainHeader()
 {
     // Buissness Application Pointer Head
     cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
-    cout << "~~~ Clothing Brand Management System ~~~" << endl;
+    cout << "  ~~~~~  Brand Management System ~~~~~  " << endl;
     cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
 }
 string adminMenu()
