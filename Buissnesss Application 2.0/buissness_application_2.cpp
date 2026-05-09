@@ -152,6 +152,7 @@ main()
                 else if (adminOption == "4")
                 {
                     // Code for View Product
+                    system("Color 05");
                     viewProductAdmin();
                 }
                 else if (adminOption == "5")
@@ -214,6 +215,7 @@ main()
                 if (customerOption == "1")
                 {
                     // Code for View Products
+                    system("Color 06");
                     viewProductCustomer();
                 }
                 else if (customerOption == "2")
@@ -284,6 +286,7 @@ main()
 // ------------------------------- Function Implimentation Start
 void whoHeader()
 {
+    system("Color 01");
     cout << "============================================================" << endl
          << "============================================================" << endl
          << "        ~~~ WELCOME TO BRAND MANAGEMENT SYSTEM ~~~          " << endl
@@ -294,6 +297,7 @@ string who()
 {
     system("cls");
     whoHeader();
+    system("Color 08");
     cout << "Enter username: ";
     string username;
     cin >> username;
@@ -339,6 +343,7 @@ void mainHeader()
 }
 string adminMenu()
 {
+    system("Color 03");
     mainHeader();
     // Code for Owner Menu
     // 1.Add product, 2.Search Product, 3.Update Product, 4.Delete Product, 5.View Product,
@@ -365,6 +370,7 @@ string adminMenu()
 }
 string customerMenu()
 {
+    system("Color 04");
     mainHeader();
     // Code for Customer Menu
     // 1.View Products, 2.Search Product, 3.Add product in cart, 4.Buy a Product, 5.Track Order
@@ -437,9 +443,6 @@ void addProductToArray(string product_name, int product_price, string product_co
     product_sale_array[count_product] = product_sale;
     count_product++;
 }
-// 1.Add product, 2.Search Product, 3.Update Product, 4.Delete Product, 5.View Product,
-// 6.Add sale on products, 7.Customer Feedback, 8.Show Customer Rating 9.Show Pending Order,
-// 10.Show Delievered Order 11.Update Order Location  12.Exit
 void searchProductAdmin()
 {
     // Code to Search Product
@@ -578,7 +581,9 @@ void deleteProduct()
 }
 void viewPrdouctAdminMenu()
 {
-    cout << "---View Product---" << endl;
+    cout << "-------------------------------" << endl;
+    cout << "--- View Product Admin Menu ---" << endl;
+    cout << "-------------------------------" << endl;
     cout << "1.All Products" << endl
          << "2.In Stock Product" << endl
          << "3.Out of Stock Product" << endl
@@ -879,8 +884,10 @@ void updateOrderLocation()
 }
 void viewProductMenuCustomer()
 {
-    cout << "---View Product---" << endl
-         << "1.All Products" << endl
+    cout << "----------------------------------" << endl;
+    cout << "--- View Product Customer Menu ---" << endl;
+    cout << "----------------------------------" << endl;
+    cout << "1.All Products" << endl
          << "2.Catogerized Products" << endl
          << "3.View Prdoucts with prices(highest to lowest)" << endl
          << "4.View Prdoucts with prices(lowest to highest)" << endl
