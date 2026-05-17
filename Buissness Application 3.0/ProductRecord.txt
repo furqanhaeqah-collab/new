@@ -1,0 +1,30 @@
+Cotton Shirt,85000,C101,Yes,Yes,76500.000000,Excellent quality and very comfortable,5,Delivered,1023
+Denim Jeans,45000,C102,Yes,No,45000.000000,Good fabric but a bit expensive,4,Pending,1024
+Leather Jacket,5000,C103,No,Yes,4250.000000,Average stitching expected better,3,Delivered,2045
+Summer Kurta,2500,C104,Yes,No,2500.000000,Very stylish and perfect fit,5,Delivered,3024
+Wool Sweater,1500,C105,Yes,Yes,1425.000000,Color faded after one wash,2,Pending,4024
+Casual T-Shirt,30000,C106,No,No,30000.000000,Highly recommended worth the price,5,Pending,3098
+Formal Pants,20000,C107,Yes,Yes,16000.000000,Size was not accurate,3,Delivered,4567
+Silk Saree,40000,C108,Yes,No,40000.000000,Material is soft and breathable,4,Pending,1342
+Hoodie,60000,C109,No,Yes,54000.000000,Design is nice but delivery was late,3,Delivered,1674
+Track Suit,7000,C110,Yes,No,7000.000000,Amazing product will buy again,5,Delivered,5123
+Running Shoes,5000,S101,Yes,Yes,4500.000000,Very comfortable for daily use,5,Pending,3423
+Sneakers,4500,S102,Yes,No,4500.000000,Stylish and affordable,4,Delivered,6789
+Formal Shoes,6000,S103,No,Yes,4800.000000,Good quality but size issue,3,Pending,3423
+Sports Trainers,5500,S104,Yes,No,5500.000000,Perfect for sports activities,5,Pending,7345
+Canvas shoes,2500,S105,Yes,Yes,2125.000000,Lightweight and durable,2,Delivered,2323
+Leather Boots,8000,S106,No,Yes,6400.000000,Excellent leather finish,5,Delivered,8456
+Flip Flops,1200,S107,Yes,No,1200.000000,Cheap but not long lasting,3,Pending,9567
+Sandals,2000,S108,Yes,Yes,1800.000000,Comfortable for summer wear,4,Delivered,4223
+High Tops,4800,S109,Yes,No,4800.000000,Trendy design loved it,3,Pending,1124
+Joggers,5200,S110,No,No,5200.000000,Great cushioning and support,5,Delivered,1122
+Gold Necklace,2220000,J101,Yes,Yes,2109000.000000,The design is elegant,5,Pending,5224
+Silver Ring,5000,J102,Yes,No,5000.000000,Great quality for the price,4,Delivered,2233
+Diamond Earrings,250000,J103,Yes,No,250000.000000,Lightweight and comfortable to wear,5,Delivered,5024
+Pearl Bracelet,15000,J104,Yes,No,15000.000000,The shine and finish give it a premium feel,4,Pending,3344
+Platinium Chain,80000,J105,Yes,Yes,64000.000000,Beautiful piece,5,Delivered,2343
+Anklet,30000,J106,Yes,No,30000.000000,Packaging was neat and perfect for gifting,4,Pending,4455
+Nose Pin,4000,J107,No,No,4000.000000,The color and polish have held up well,3,Pending,5566
+Bangles Set,25000,J108,Yes,No,25000.000000,Stylish and trendy but durability could be improved,5,Delivered,2323
+Pendant,10000,J109,Yes,Yes,8800.000000,Overall a lovely accessory,4,Delivered,6677
+Wedding Ring,180000,J110,Yes,Yes,153000.000000,Loved it,5,Pending,7788
