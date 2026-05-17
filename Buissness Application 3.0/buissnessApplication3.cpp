@@ -18,6 +18,10 @@ string managerMenu();
 string customerMenu();
 void clearScreen();
 void viewUsers();
+void updateUsers();
+void updateUserToFile(int found_index, string username, string password, string role);
+void deleteUsers();
+void deleteUserToFile(int found_index, string username, string password, string role);
 void addProduct();
 void addProductToFile(string product_name, int product_price, string product_code, string product_available, string product_sale_on, float product_sale);
 void searchProductAdmin();
@@ -53,7 +57,7 @@ void exitMenu();
 
 // ------------------------------- Data Structures Start
 const int TOTAL_USER = 10;
-int count_user = 0;
+int count_user = 2;
 string username_array[TOTAL_USER];
 string password_array[TOTAL_USER];
 string role_array[TOTAL_USER];
@@ -111,10 +115,20 @@ main()
                     }
                     else if (ownerOption == "2")
                     {
-                        // Code for view Users
+                        // Code for View Users
                         viewUsers();
                     }
                     else if (ownerOption == "3")
+                    {
+                        // Code for Update Users
+                        updateUsers();
+                    }
+                    else if (ownerOption == "4")
+                    {
+                        // Code for Delete Users
+                        deleteUsers();
+                    }
+                    else if (ownerOption == "5")
                     {
                         // Exit Menu Code
                         exitMenu();
@@ -331,6 +345,129 @@ void addUserInput()
     }
     clearScreen();
 }
+void updateUser()
+{
+    system("cls");
+    cout << "Enter the username you want you update: ";
+    string username;
+    cin >> username;
+    int index = 0;
+    string userRecord;
+    fstream userfile;
+    userfile.open("UserRecord.txt", ios::in);
+    while (!userfile.eof())
+    {
+        getline(userfile, userRecord);
+        username_array[index] = getField(userRecord, 1);
+        password_array[index] = getField(userRecord, 2);
+        role_array[index] = getField(userRecord, 3);
+        index++;
+    }
+    bool is_found = false;
+    int found_index = 0;
+    for (int i = 0; i < TOTAL_USER; i++)
+    {
+        if (username_array[i] == username)
+        {
+            is_found = true;
+            found_index = i;
+        }
+    }
+    if (is_found == false)
+    {
+        cout << "No product found" << endl
+             << "Invalid product code" << endl;
+    }
+    else
+    {
+        cout << "---Update an existing Product---" << endl;
+        cout << "Enter the username: ";
+        string username_update;
+        cin >> username_update;
+        cout << "Enter password: ";
+        string user_password;
+        cin >> user_password;
+        cout << "Enter role: ";
+        string user_role;
+        cin >> user_role;
+        updateUserToFile(found_index, username_update, user_password, user_role);
+    }
+    clearScreen();
+    userfile.close();
+}
+void updateUserToFile(int found_index, string username, string password, string role)
+{
+    fstream userfile;
+    userfile.open("UserRecord.txt", ios::out);
+    username_array[found_index] = username;
+    password_array[found_index] = password;
+    role_array[found_index] = role;
+    string product_record[TOTAL_PRODUCT];
+    for (int i = 0; i < count_user; i++)
+    {
+        string userRecord[i] = username_array[i] + "," + password_array[i] + "," + role_array[i] + "\n";
+        userfile << userRecord[i];
+    }
+    userfile.close();
+}
+void deleteUser()
+{
+    system("cls");
+    cout << "Enter the username you want you update: ";
+    string username;
+    cin >> username;
+    int index = 0;
+    string userRecord;
+    fstream userfile;
+    userfile.open("UserRecord.txt", ios::in);
+    while (!userfile.eof())
+    {
+        getline(userfile, userRecord);
+        username_array[index] = getField(userRecord, 1);
+        password_array[index] = getField(userRecord, 2);
+        role_array[index] = getField(userRecord, 3);
+        index++;
+    }
+    bool is_found = false;
+    int found_index = 0;
+    for (int i = 0; i < TOTAL_USER; i++)
+    {
+        if (username_array[i] == username)
+        {
+            is_found = true;
+            found_index = i;
+        }
+    }
+    if (is_found == false)
+    {
+        cout << "No product found" << endl
+             << "Invalid product code" << endl;
+    }
+    else
+    {
+        string username_update = " ";
+        string user_password = " ";
+        string user_role = " ";
+        updateUserToFile(found_index, username_update, user_password, user_role);
+    }
+    clearScreen();
+    userfile.close();
+}
+void deleteUserToFile(int found_index, string username, string password, string role)
+{
+    fstream userfile;
+    userfile.open("UserRecord.txt", ios::out);
+    username_array[found_index] = username;
+    password_array[found_index] = password;
+    role_array[found_index] = role;
+    string product_record[TOTAL_PRODUCT];
+    for (int i = 0; i < count_user; i++)
+    {
+        string userRecord[i] = username_array[i] + "," + password_array[i] + "," + role_array[i] + "\n";
+        userfile << userRecord[i];
+    }
+    userfile.close();
+}
 string getField(string record, int field)
 {
     int commaCount = 1;
@@ -408,7 +545,9 @@ string ownerMenu()
     cout << "Owner Menu" << endl
          << "1.Add Users" << endl
          << "2.View Users" << endl
-         << "3.Exit" << endl;
+         << "3.Update Users" << endl
+         << "4.Delete Users" << endl
+         << "5.Exit" << endl;
     cout << "Enter your choice: ";
     string owner_choice;
     cin >> owner_choice;
