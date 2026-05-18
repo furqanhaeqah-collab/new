@@ -1,1 +1,5 @@
-J101,Good Quality
+C101,Excellent quality and very comfortable,5
+C104,Very stylish and perfect fit,5
+S107,Perfect for sports activities,5
+J101,Good Quality,4
+j105,Great quality for the price,4
