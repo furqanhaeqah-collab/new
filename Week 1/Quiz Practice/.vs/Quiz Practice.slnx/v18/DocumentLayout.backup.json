@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\BSCS_2nd_Semester\\OOP Programming\\Week 1\\Quiz Practice\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E73BEADB-6E25-4759-B455-D3D9941F9297}|Quiz Practice.csproj|c:\\bscs_2nd_semester\\oop programming\\week 1\\quiz practice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E73BEADB-6E25-4759-B455-D3D9941F9297}|Quiz Practice.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\BSCS_2nd_Semester\\OOP Programming\\Week 1\\Quiz Practice\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\BSCS_2nd_Semester\\OOP Programming\\Week 1\\Quiz Practice\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAkwDkAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-20T13:49:30.998Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

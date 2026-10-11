@@ -1,0 +1,7 @@
+C:\BSCS_2nd_Semester\OOP Programming\Week 1\Quiz Practice\bin\Debug\Quiz Practice.exe.config
+C:\BSCS_2nd_Semester\OOP Programming\Week 1\Quiz Practice\bin\Debug\Quiz Practice.exe
+C:\BSCS_2nd_Semester\OOP Programming\Week 1\Quiz Practice\bin\Debug\Quiz Practice.pdb
+C:\BSCS_2nd_Semester\OOP Programming\Week 1\Quiz Practice\obj\Debug\Quiz Practice.csproj.AssemblyReference.cache
+C:\BSCS_2nd_Semester\OOP Programming\Week 1\Quiz Practice\obj\Debug\Quiz Practice.csproj.CoreCompileInputs.cache
+C:\BSCS_2nd_Semester\OOP Programming\Week 1\Quiz Practice\obj\Debug\Quiz Practice.exe
+C:\BSCS_2nd_Semester\OOP Programming\Week 1\Quiz Practice\obj\Debug\Quiz Practice.pdb

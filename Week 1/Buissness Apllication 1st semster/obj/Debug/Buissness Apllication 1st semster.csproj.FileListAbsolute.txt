@@ -1,0 +1,7 @@
+C:\BSCS_2nd_Semester\OOP Programming\Week 1\Buissness Apllication 1st semster\obj\Debug\Buissness Apllication 1st semster.csproj.AssemblyReference.cache
+C:\BSCS_2nd_Semester\OOP Programming\Week 1\Buissness Apllication 1st semster\obj\Debug\Buissness Apllication 1st semster.csproj.CoreCompileInputs.cache
+C:\BSCS_2nd_Semester\OOP Programming\Week 1\Buissness Apllication 1st semster\bin\Debug\Buissness Apllication 1st semster.exe.config
+C:\BSCS_2nd_Semester\OOP Programming\Week 1\Buissness Apllication 1st semster\bin\Debug\Buissness Apllication 1st semster.exe
+C:\BSCS_2nd_Semester\OOP Programming\Week 1\Buissness Apllication 1st semster\bin\Debug\Buissness Apllication 1st semster.pdb
+C:\BSCS_2nd_Semester\OOP Programming\Week 1\Buissness Apllication 1st semster\obj\Debug\Buissness Apllication 1st semster.exe
+C:\BSCS_2nd_Semester\OOP Programming\Week 1\Buissness Apllication 1st semster\obj\Debug\Buissness Apllication 1st semster.pdb
