@@ -1,0 +1,7 @@
+C:\BSCS_2nd_Semester\OOP Programming\Week 4\Week 4\bin\Debug\Week 4.exe.config
+C:\BSCS_2nd_Semester\OOP Programming\Week 4\Week 4\bin\Debug\Week 4.exe
+C:\BSCS_2nd_Semester\OOP Programming\Week 4\Week 4\bin\Debug\Week 4.pdb
+C:\BSCS_2nd_Semester\OOP Programming\Week 4\Week 4\obj\Debug\Week 4.csproj.AssemblyReference.cache
+C:\BSCS_2nd_Semester\OOP Programming\Week 4\Week 4\obj\Debug\Week 4.csproj.CoreCompileInputs.cache
+C:\BSCS_2nd_Semester\OOP Programming\Week 4\Week 4\obj\Debug\Week 4.exe
+C:\BSCS_2nd_Semester\OOP Programming\Week 4\Week 4\obj\Debug\Week 4.pdb
