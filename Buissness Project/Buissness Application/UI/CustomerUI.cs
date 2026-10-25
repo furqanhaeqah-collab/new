@@ -29,6 +29,7 @@ namespace Buissness_Application.UI
         }
         public string CustomerMenuUI()
         {
+            Console.Clear();
             MainHeaderCustomerUI();
             Console.WriteLine("----Customer Menu----");
             Console.WriteLine("1.View Product");
@@ -38,7 +39,9 @@ namespace Buissness_Application.UI
             Console.WriteLine("5.Cancel Order");
             Console.WriteLine("6.Send Feedback");
             Console.WriteLine("7.View Feedback");
-            Console.WriteLine("8.Exit");
+            Console.WriteLine("8.Search Feedback");
+            Console.WriteLine("9.Delete Feedback");
+            Console.WriteLine("10.Exit");
             Console.Write("Enter your choice: ");
             string customer_choice = Console.ReadLine();
             return customer_choice;

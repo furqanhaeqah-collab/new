@@ -42,22 +42,10 @@ namespace Buissness_Application.Service
         {
             List<CustomerModel> CustomerList = new List<CustomerModel>();
             CustomerModel customer = new CustomerModel();
+            _repositry.ClearData();
             customer = CustomerList[i];
             CustomerList.Remove(customer);
             _repositry.SaveList(CustomerList);
-        }
-        public int FindProductandCustomerService(string code, string name)
-        {
-            List<CustomerModel> CustomerList = new List<CustomerModel>();
-            CustomerList = _repositry.GetData();
-            for(int i =0; i < CustomerList.Count; i++)
-            {
-                if (CustomerList[i].CustomerName == name && CustomerList[i].ProductCode == code)
-                {
-                    return i;
-                }
-            }
-            return -1;
         }
     }
 }

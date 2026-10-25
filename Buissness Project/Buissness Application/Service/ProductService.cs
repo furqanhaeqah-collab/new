@@ -41,6 +41,7 @@ namespace Buissness_Application.Service
         {
             List<ProductModel> ProductList = new List<ProductModel>();
             ProductList = _repositry.GetData();
+            _repositry.ClearData();
             ProductList[i] = product;
             _repositry.SaveList(ProductList);
         }
@@ -71,6 +72,7 @@ namespace Buissness_Application.Service
             List<ProductModel> ProductList = new List<ProductModel>();
             ProductModel product = new ProductModel();
             ProductList = _repositry.GetData();
+            _repositry.ClearData();
             product = ProductList[i];
             ProductList.Remove(product);
             _repositry.SaveList(ProductList);
@@ -96,6 +98,7 @@ namespace Buissness_Application.Service
         {
             List<ProductModel> ProductList = new List<ProductModel>();
             ProductList = _repositry.GetData();
+            _repositry.ClearData();
             if (ProductList[i].product_sale_on == "Yes")
             {
                 ProductList[i].product_sale_on = "No";

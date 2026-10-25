@@ -41,6 +41,7 @@ namespace Buissness_Application.Service
             List<FeedbackModel> FeedbackList = new List<FeedbackModel>();
             FeedbackModel review = new FeedbackModel();
             FeedbackList = _repositry.GetData();
+            _repositry.ClearData();
             review = FeedbackList[i];
             FeedbackList.Remove(review);
             _repositry.SaveList(FeedbackList);

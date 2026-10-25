@@ -243,6 +243,18 @@ namespace Buissness_Application
                         }
                         else if (customerOption == "8")
                         {
+                            // Code for View Feedback
+                            Console.Clear();
+                            _FeedbackUI.SearchFeedback();
+                        }
+                        else if (customerOption == "9")
+                        {
+                            // Code for View Feedback
+                            Console.Clear();
+                            _FeedbackUI.DeleteFeedback();
+                        }
+                        else if (customerOption == "10")
+                        {
                             // Code for Exit Customer Menu
                             Console.Clear();
                             _ProductUI.ExitProgram();
