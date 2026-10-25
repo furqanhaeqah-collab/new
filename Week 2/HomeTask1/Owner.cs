@@ -33,5 +33,6 @@ namespace HomeTask1
             string owner_choice = Console.ReadLine();
             return owner_choice;
         }
+
     }
 }

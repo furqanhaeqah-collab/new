@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\BSCS_2nd_Semester\\OOP Programming\\Week 3\\Week3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DE657AC2-BAFC-4B62-AE8F-3A905914A01E}|Week3.csproj|C:\\BSCS_2nd_Semester\\OOP Programming\\Week 3\\Week3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE657AC2-BAFC-4B62-AE8F-3A905914A01E}|Week3.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE657AC2-BAFC-4B62-AE8F-3A905914A01E}|Week3.csproj|c:\\bscs_2nd_semester\\oop programming\\week 3\\week3\\task10.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE657AC2-BAFC-4B62-AE8F-3A905914A01E}|Week3.csproj|solutionrelative:task10.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DE657AC2-BAFC-4B62-AE8F-3A905914A01E}|Week3.csproj|c:\\bscs_2nd_semester\\oop programming\\week 3\\week3\\task11.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE657AC2-BAFC-4B62-AE8F-3A905914A01E}|Week3.csproj|solutionrelative:task11.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE657AC2-BAFC-4B62-AE8F-3A905914A01E}|Week3.csproj|C:\\BSCS_2nd_Semester\\OOP Programming\\Week 3\\Week3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE657AC2-BAFC-4B62-AE8F-3A905914A01E}|Week3.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,17 +18,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\BSCS_2nd_Semester\\OOP Programming\\Week 3\\Week3\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\BSCS_2nd_Semester\\OOP Programming\\Week 3\\Week3\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAGUBAAAAAAAAAAAgwGkBAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAKwBAAAAAAAAAAAgwNoBAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-08T12:46:09.18Z",
               "IsPinned": true,
@@ -40,26 +36,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Task10.cs",
-              "DocumentMoniker": "C:\\BSCS_2nd_Semester\\OOP Programming\\Week 3\\Week3\\Task10.cs",
-              "RelativeDocumentMoniker": "Task10.cs",
-              "ToolTip": "C:\\BSCS_2nd_Semester\\OOP Programming\\Week 3\\Week3\\Task10.cs",
-              "RelativeToolTip": "Task10.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAIwB0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-11T07:40:48.62Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Task11.cs",
               "DocumentMoniker": "C:\\BSCS_2nd_Semester\\OOP Programming\\Week 3\\Week3\\Task11.cs",
               "RelativeDocumentMoniker": "Task11.cs",
               "ToolTip": "C:\\BSCS_2nd_Semester\\OOP Programming\\Week 3\\Week3\\Task11.cs",
               "RelativeToolTip": "Task11.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwDQAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-11T07:40:50.273Z",
               "EditorCaption": ""

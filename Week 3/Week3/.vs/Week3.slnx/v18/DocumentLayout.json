@@ -3,8 +3,28 @@
   "WorkspaceRootPath": "C:\\BSCS_2nd_Semester\\OOP Programming\\Week 3\\Week3\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DE657AC2-BAFC-4B62-AE8F-3A905914A01E}|Week3.csproj|c:\\bscs_2nd_semester\\oop programming\\week 3\\week3\\task3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE657AC2-BAFC-4B62-AE8F-3A905914A01E}|Week3.csproj|solutionrelative:task3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DE657AC2-BAFC-4B62-AE8F-3A905914A01E}|Week3.csproj|c:\\bscs_2nd_semester\\oop programming\\week 3\\week3\\task11.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE657AC2-BAFC-4B62-AE8F-3A905914A01E}|Week3.csproj|solutionrelative:task11.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE657AC2-BAFC-4B62-AE8F-3A905914A01E}|Week3.csproj|c:\\bscs_2nd_semester\\oop programming\\week 3\\week3\\task9.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE657AC2-BAFC-4B62-AE8F-3A905914A01E}|Week3.csproj|solutionrelative:task9.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE657AC2-BAFC-4B62-AE8F-3A905914A01E}|Week3.csproj|c:\\bscs_2nd_semester\\oop programming\\week 3\\week3\\task8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE657AC2-BAFC-4B62-AE8F-3A905914A01E}|Week3.csproj|solutionrelative:task8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE657AC2-BAFC-4B62-AE8F-3A905914A01E}|Week3.csproj|c:\\bscs_2nd_semester\\oop programming\\week 3\\week3\\task7.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE657AC2-BAFC-4B62-AE8F-3A905914A01E}|Week3.csproj|solutionrelative:task7.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE657AC2-BAFC-4B62-AE8F-3A905914A01E}|Week3.csproj|c:\\bscs_2nd_semester\\oop programming\\week 3\\week3\\task6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE657AC2-BAFC-4B62-AE8F-3A905914A01E}|Week3.csproj|solutionrelative:task6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DE657AC2-BAFC-4B62-AE8F-3A905914A01E}|Week3.csproj|C:\\BSCS_2nd_Semester\\OOP Programming\\Week 3\\Week3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,13 +42,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\BSCS_2nd_Semester\\OOP Programming\\Week 3\\Week3\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\BSCS_2nd_Semester\\OOP Programming\\Week 3\\Week3\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAKwBAAAAAAAAAAAgwNoBAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwNoBAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-08T12:46:09.18Z",
               "IsPinned": true,
@@ -37,12 +57,77 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Task3.cs",
+              "DocumentMoniker": "C:\\BSCS_2nd_Semester\\OOP Programming\\Week 3\\Week3\\Task3.cs",
+              "RelativeDocumentMoniker": "Task3.cs",
+              "ToolTip": "C:\\BSCS_2nd_Semester\\OOP Programming\\Week 3\\Week3\\Task3.cs",
+              "RelativeToolTip": "Task3.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T10:08:34.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Task9.cs",
+              "DocumentMoniker": "C:\\BSCS_2nd_Semester\\OOP Programming\\Week 3\\Week3\\Task9.cs",
+              "RelativeDocumentMoniker": "Task9.cs",
+              "ToolTip": "C:\\BSCS_2nd_Semester\\OOP Programming\\Week 3\\Week3\\Task9.cs",
+              "RelativeToolTip": "Task9.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T10:08:32.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Task8.cs",
+              "DocumentMoniker": "C:\\BSCS_2nd_Semester\\OOP Programming\\Week 3\\Week3\\Task8.cs",
+              "RelativeDocumentMoniker": "Task8.cs",
+              "ToolTip": "C:\\BSCS_2nd_Semester\\OOP Programming\\Week 3\\Week3\\Task8.cs",
+              "RelativeToolTip": "Task8.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T10:08:29.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Task7.cs",
+              "DocumentMoniker": "C:\\BSCS_2nd_Semester\\OOP Programming\\Week 3\\Week3\\Task7.cs",
+              "RelativeDocumentMoniker": "Task7.cs",
+              "ToolTip": "C:\\BSCS_2nd_Semester\\OOP Programming\\Week 3\\Week3\\Task7.cs",
+              "RelativeToolTip": "Task7.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T10:08:27.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Task6.cs",
+              "DocumentMoniker": "C:\\BSCS_2nd_Semester\\OOP Programming\\Week 3\\Week3\\Task6.cs",
+              "RelativeDocumentMoniker": "Task6.cs",
+              "ToolTip": "C:\\BSCS_2nd_Semester\\OOP Programming\\Week 3\\Week3\\Task6.cs",
+              "RelativeToolTip": "Task6.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T10:08:25.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Task11.cs",
               "DocumentMoniker": "C:\\BSCS_2nd_Semester\\OOP Programming\\Week 3\\Week3\\Task11.cs",
               "RelativeDocumentMoniker": "Task11.cs",
               "ToolTip": "C:\\BSCS_2nd_Semester\\OOP Programming\\Week 3\\Week3\\Task11.cs",
               "RelativeToolTip": "Task11.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwDQAAABJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-11T07:40:50.273Z",
               "EditorCaption": ""

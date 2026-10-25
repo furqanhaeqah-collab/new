@@ -1,0 +1,4 @@
+Owner,owner1234,ADMIN
+Manager,manager1234,MANAGER
+Employee,employee1234,EMPLOYEE
+Rita,employee1234,EMPLOYEE

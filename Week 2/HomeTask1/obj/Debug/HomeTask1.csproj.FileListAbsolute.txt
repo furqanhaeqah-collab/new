@@ -1,0 +1,7 @@
+C:\BSCS_2nd_Semester\OOP Programming\Week 2\HomeTask1\bin\Debug\HomeTask1.exe.config
+C:\BSCS_2nd_Semester\OOP Programming\Week 2\HomeTask1\bin\Debug\HomeTask1.exe
+C:\BSCS_2nd_Semester\OOP Programming\Week 2\HomeTask1\bin\Debug\HomeTask1.pdb
+C:\BSCS_2nd_Semester\OOP Programming\Week 2\HomeTask1\obj\Debug\HomeTask1.csproj.AssemblyReference.cache
+C:\BSCS_2nd_Semester\OOP Programming\Week 2\HomeTask1\obj\Debug\HomeTask1.csproj.CoreCompileInputs.cache
+C:\BSCS_2nd_Semester\OOP Programming\Week 2\HomeTask1\obj\Debug\HomeTask1.exe
+C:\BSCS_2nd_Semester\OOP Programming\Week 2\HomeTask1\obj\Debug\HomeTask1.pdb
