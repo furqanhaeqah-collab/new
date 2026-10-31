@@ -13,38 +13,31 @@ namespace Buissness_Application.Service
     public class CustomerService
     {
         private readonly CustomerRepositries _repositry;
+        private List<CustomerModel> CustomerList;
         public CustomerService()
         {
             _repositry = new CustomerRepositries();
+            CustomerList = _repositry.GetData();
         }
         public void AddCustomerCredentialsService(CustomerModel customer)
         {
             _repositry.SaveObject(customer);
         }
-        public List<CustomerModel> CustomerList()
+        public CustomerModel FindCustomerService(string Id)
         {
-            return _repositry.GetData();
-        }
-        public int FindCustomerService(string Name)
-        {
-            List<CustomerModel> CustomerList = new List<CustomerModel>();
-            CustomerList = _repositry.GetData();
+            CustomerModel c = new CustomerModel();
             for (int i = 0; i < CustomerList.Count; i++)
             {
-                if (CustomerList[i].CustomerName == Name)
+                if (CustomerList[i].CustomerId == Id)
                 {
-                    return i;
+                    return c;
                 }
             }
-            return -1;
+            return null;
         }
-        public void DeleteCustomerService(int i)
+        public void DeleteCustomerService(CustomerModel c)
         {
-            List<CustomerModel> CustomerList = new List<CustomerModel>();
-            CustomerModel customer = new CustomerModel();
-            _repositry.ClearData();
-            customer = CustomerList[i];
-            CustomerList.Remove(customer);
+            CustomerList.Remove(c);
             _repositry.SaveList(CustomerList);
         }
     }

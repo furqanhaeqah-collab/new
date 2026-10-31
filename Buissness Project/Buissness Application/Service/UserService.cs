@@ -12,27 +12,24 @@ namespace Buissness_Application.Service
     public class UserService
     {
         private readonly UserRepositries _repositry;
+        private List<UserModel> UserList;
         public UserService()
         {
             _repositry = new UserRepositries();
+            UserList = _repositry.GetData();
         }
         public void AddUserService(UserModel user)
         {
             _repositry.SaveObject(user);
-            List<UserModel> UserList = new List<UserModel>();
             UserList = _repositry.GetData();
             UserList.Add(user);
         }
         public List<UserModel> ViewUserService()
         {
-            List<UserModel> UserList = new List<UserModel>();
-            UserList = _repositry.GetData();
-            return UserList;
+            return UserList = _repositry.GetData();
         }
         public string FindUser(string u, string p)
         {
-            List<UserModel> UserList = new List<UserModel>();
-            UserList = _repositry.GetData();
             foreach (var i in UserList)
             {
                 if (i.Username == u && i.Password == p)

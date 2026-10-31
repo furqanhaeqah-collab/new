@@ -1,6 +1,7 @@
 ﻿using Buissness_Application.Model;
 using Buissness_Application.Repositries;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,9 +12,11 @@ namespace Buissness_Application.Service
     public class FeedbackService
     {
         private readonly FeedbackRepositries _repositry;
+        private List<FeedbackModel> FeedbackList;
         public FeedbackService()
         {
             _repositry = new FeedbackRepositries();
+            FeedbackList = _repositry.GetData();
         }
         public void AddFeedbackService(FeedbackModel review)
         {
@@ -23,26 +26,20 @@ namespace Buissness_Application.Service
         {
             return _repositry.GetData();
         }
-        public int FindFeddbackService(string name)
+        public FeedbackModel FindFeddbackService(string name)
         {
-            List<FeedbackModel> FeedbackList = new List<FeedbackModel>();
-            FeedbackList = _repositry.GetData();
-            for(int i = 0; i < FeedbackList.Count; i++)
+            FeedbackModel review = new FeedbackModel();
+            foreach(var feedback in FeedbackList)
             {
-                if(name == FeedbackList[i].name)
+                if(name == feedback.name)
                 {
-                    return i;
+                    return feedback;
                 }
             }
-            return -1;
+            return null;
         }
-        public void DeleteFeedbackService(int i)
+        public void DeleteFeedbackService(FeedbackModel review)
         {
-            List<FeedbackModel> FeedbackList = new List<FeedbackModel>();
-            FeedbackModel review = new FeedbackModel();
-            FeedbackList = _repositry.GetData();
-            _repositry.ClearData();
-            review = FeedbackList[i];
             FeedbackList.Remove(review);
             _repositry.SaveList(FeedbackList);
         }

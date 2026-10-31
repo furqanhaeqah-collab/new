@@ -20,6 +20,7 @@ namespace Buissness_Application.Repositries
         }
         public void SaveList(List<UserModel> UserList)
         {
+            ClearData();
             using (StreamWriter write = new StreamWriter(_UserFile))
             {
                 foreach (var i in UserList)

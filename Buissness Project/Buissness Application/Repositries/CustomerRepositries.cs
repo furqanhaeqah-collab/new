@@ -13,13 +13,14 @@ namespace Buissness_Application.Repositries
         private readonly string _CustomerFile = "C:\\BSCS_2nd_Semester\\OOP Programming\\Buissness Project\\Buissness Application\\CustomerRecord.txt";
         public void SaveObject(CustomerModel customer)
         {
-            using(StreamWriter write = new StreamWriter(_CustomerFile, true))
+            using (StreamWriter write = new StreamWriter(_CustomerFile, true))
             {
                 write.WriteLine(customer.ToString());
             }
         }
         public void SaveList(List<CustomerModel> CustomerList)
         {
+            ClearData();
             using (StreamWriter write = new StreamWriter(_CustomerFile, true))
             {
                 foreach (var i in CustomerList)
@@ -51,15 +52,16 @@ namespace Buissness_Application.Repositries
             CustomerModel customer = new CustomerModel();
             StreamReader read = new StreamReader(_CustomerFile);
             string details;
-            while((details = read.ReadLine()) != null)
+            while ((details = read.ReadLine()) != null)
             {
-                customer.CustomerName = GetField(details, 1);
-                customer.Address = GetField(details, 2);
-                customer.ContactNo = GetField(details, 3);
-                customer.PostalCode = int.Parse(GetField(details, 4));
-                customer.ProductCode = GetField(details, 5);
-                customer.ProductPrice = float.Parse(GetField(details, 6));
-                CustomerList.Add(new CustomerModel(customer.CustomerName, customer.Address, customer.ContactNo, customer.PostalCode, customer.ProductCode, customer.ProductPrice));
+                customer.CustomerId = GetField(details, 1);
+                customer.CustomerName = GetField(details, 2);
+                customer.Address = GetField(details, 3);
+                customer.ContactNo = GetField(details, 4);
+                customer.PostalCode = int.Parse(GetField(details, 5));
+                customer.ProductCode = GetField(details, 6);
+                customer.ProductPrice = float.Parse(GetField(details, 7));
+                CustomerList.Add(new CustomerModel(customer.CustomerId, customer.CustomerName, customer.Address, customer.ContactNo, customer.PostalCode, customer.ProductCode, customer.ProductPrice));
             }
             read.Close();
             return CustomerList;

@@ -20,6 +20,7 @@ namespace Buissness_Application.UI
         {
             _PService = new ProductService();
             _service = new CustomerService();
+
         }
         public void MainHeaderCustomerUI()
         {
@@ -46,34 +47,31 @@ namespace Buissness_Application.UI
             string customer_choice = Console.ReadLine();
             return customer_choice;
         }
-        public void BuyProductUI(CustomerModel customer, List<ProductModel> productlist)
+        public void BuyProductUI(CustomerModel customer)
         {
             // Code for Bying
+            ProductModel product = new ProductModel();
             Console.Write("Enter the product code: ");
             string code = Console.ReadLine();
-            int i = _PService.FindProductService(code);
-            productlist = _PService.ViewProductService();
-            if (i == -1)
+            product = _PService.FindByCode(code);
+            if (product == null)
             {
                 Console.WriteLine("No product found");
                 Console.WriteLine("Invalid product code");
             }
             else
             {
-                Console.WriteLine("Product ID: \t" + productlist[i].product_code);
-                Console.WriteLine("Product name: \t" + productlist[i].product_name);
-                Console.WriteLine("Product price: \t" + productlist[i].product_price);
-                Console.WriteLine("Discounted prie: \t " + productlist[i].product_sale);
-                if (productlist[i].product_sale != productlist[i].product_price)
-                {
-                    customer.ProductPrice = productlist[i].product_sale;
-                }
-                else
-                {
-                    customer.ProductPrice = productlist[i].product_price;
-                }
-                customer.ProductCode = productlist[i].product_code;
+                Console.WriteLine("Product ID: \t" + product.product_code);
+                Console.WriteLine("Product name: \t" + product.product_name);
+                Console.WriteLine("Product price: \t" + product.product_price);
+                customer.ProductCode = product.product_code;
                 Console.WriteLine("Customer Credentials");
+                Console.Write("Enter your Customer Id: ");
+                customer.CustomerId = Console.ReadLine();
+                Console.Write("Enter your Customer Name: ");
+                customer.CustomerName = Console.ReadLine();
+                Console.Write("Enter your Address: ");
+                customer.Address = Console.ReadLine();
                 Console.Write("Enter your Phone No.: ");
                 customer.ContactNo = Console.ReadLine();
                 Console.Write("Enter your postal code: ");
@@ -82,20 +80,21 @@ namespace Buissness_Application.UI
                 Console.WriteLine("Product ordered successfully");
             }
         }
-        public void CancelOrderUI()
+        public void CancelOrderUI(CustomerModel customer)
         {
             // Code for Track Order
-            Console.WriteLine("Enter Customer Name: ");
-            string Name = Console.ReadLine();
-            int i = _service.FindCustomerService(Name);
-            if (i == -1)
+            Console.WriteLine("Enter Customer Id: ");
+            string Id = Console.ReadLine();
+            customer = _service.FindCustomerService(Id);
+            if (customer == null)
             {
                 Console.WriteLine("Invalid credentials");
                 Console.WriteLine("Try again");
             }
             else
             {
-                _service.DeleteCustomerService(i);
+                _service.DeleteCustomerService(customer);
+                Console.WriteLine("Order Cancelled Succesfully");
             }
         }
     }

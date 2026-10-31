@@ -12,9 +12,11 @@ namespace Buissness_Application.UI
     public class FeedbackUI
     {
         private readonly FeedbackService _service;
+        private List<FeedbackModel> FeedbackList;
         public FeedbackUI()
         {
             _service = new FeedbackService();
+            FeedbackList = _service.ViewFeedbackService();
         }
         public void SendFeedbackUI()
         {
@@ -31,8 +33,6 @@ namespace Buissness_Application.UI
         public void ViewFeedback()
         {
             // Code for View Rating and feedback
-            List<FeedbackModel> FeedbackList = new List<FeedbackModel>();
-            FeedbackList = _service.ViewFeedbackService();
             Console.WriteLine("Product Rating\tProduct Feedback\tName");
             for (int i = 0; i < FeedbackList.Count; i++)
             {
@@ -40,14 +40,12 @@ namespace Buissness_Application.UI
             }
             Console.ReadKey();
         }
-        public void SearchFeedback()
+        public void SearchFeedback(FeedbackModel review)
         {
-            List<FeedbackModel> FeedbackList = new List<FeedbackModel>();
-            FeedbackList = _service.ViewFeedbackService();
             Console.Write("Enter your name: ");
             string name = Console.ReadLine();
-            int i = _service.FindFeddbackService(name);
-            if(i == -1)
+            review = _service.FindFeddbackService(name);
+            if(review == null)
             {
                 Console.WriteLine("Invalid name");
                 Console.WriteLine("No record found under this name: " + name);
@@ -55,25 +53,24 @@ namespace Buissness_Application.UI
             else
             {
                 Console.WriteLine("Product Rating\tProduct Feedback\tName");
-                Console.WriteLine(FeedbackList[i].rating + "\t" + FeedbackList[i].feedback + "\tby:" + FeedbackList[i].name);
+                Console.WriteLine(review.rating + "\t" + review.feedback + "\tby:" + review.name);
             }
             Console.ReadKey();
         }
-        public void DeleteFeedback()
+        public void DeleteFeedback(FeedbackModel review)
         {
-            List<FeedbackModel> FeedbackList = new List<FeedbackModel>();
-            FeedbackList = _service.ViewFeedbackService();
             Console.Write("Enter your name: ");
             string name = Console.ReadLine();
-            int i = _service.FindFeddbackService(name);
-            if (i == -1)
+            review = _service.FindFeddbackService(name);
+            if (review == null)
             {
                 Console.WriteLine("Invalid name");
                 Console.WriteLine("No record found under this name: " + name);
             }
             else
             {
-                _service.DeleteFeedbackService(i);
+                _service.DeleteFeedbackService(review);
+                Console.WriteLine("Feedback deleted successfully");
             }
             Console.ReadKey();
         }

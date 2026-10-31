@@ -21,6 +21,7 @@ namespace Buissness_Application.Repositries
         }
         public void SaveList(List<FeedbackModel> FeedbackList)
         {
+            ClearData();
             using (StreamWriter write = new StreamWriter(_FeedbackFile, true))
             {
                 foreach (var i in FeedbackList)

@@ -12,9 +12,11 @@ namespace Buissness_Application.UI
     public class UserUI
     {
         private readonly UserService _service;
+        private List<UserModel> UserList;
         public UserUI()
         {
             _service = new UserService();
+            UserList = _service.ViewUserService();
         }
         public void MainHeaderUI()
         {
@@ -46,9 +48,9 @@ namespace Buissness_Application.UI
             Console.WriteLine("5.Update Product");
             Console.WriteLine("6.View Product");
             Console.WriteLine("7.Delete Product");
-            Console.WriteLine("8.Add Sale on Product");
-            Console.WriteLine("9.Remove Sale on Product");
-            Console.WriteLine("10.View Customer Feedback");
+            Console.WriteLine("8.View Customer Feedback");
+            Console.WriteLine("9.Search Customer Feedback");
+            Console.WriteLine("10.Delete Customer Feedback");
             Console.WriteLine("11.Exit");
             Console.Write("Enter your choice: ");
             string owner_choice = Console.ReadLine();
@@ -86,8 +88,6 @@ namespace Buissness_Application.UI
         }
         public void ViewUsersUI()
         {
-            List<UserModel> UserList = new List<UserModel>();
-            UserList = _service.ViewUserService();
             Console.WriteLine("Username\tPassword\tRole");
             for(int i = 0; i < UserList.Count; i++)
             {

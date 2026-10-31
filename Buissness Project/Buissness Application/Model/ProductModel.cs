@@ -15,24 +15,18 @@ namespace Buissness_Application.Model
         public string product_code;
         public string product_available;
         public int quantity;
-        public string product_sale_on;
-        public int product_discount;
-        public float product_sale;
         public ProductModel () { }
-        public ProductModel (string product_name, float product_price, string product_code, string product_available, int quantity, string product_sale_on, int product_discount, float product_sale)
+        public ProductModel (string product_name, float product_price, string product_code, string product_available, int quantity)
         {
             this.product_name = product_name;
             this.product_price = product_price;
             this.product_code = product_code;
             this.product_available = product_available;
             this.quantity = quantity;
-            this.product_sale_on = product_sale_on;
-            this.product_discount = product_discount;
-            this.product_sale = product_sale;
         }
         public override string ToString()
         {
-            return product_name + "," + product_price + "," + product_code + "," + product_available + "," + quantity + "," + product_sale_on + "," + product_discount + "," + product_sale;
+            return product_name + "," + product_price + "," + product_code + "," + product_available + "," + quantity;
         }
     }
 }

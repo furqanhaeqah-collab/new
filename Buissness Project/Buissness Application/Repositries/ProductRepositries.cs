@@ -21,7 +21,8 @@ namespace Buissness_Application.Repositries
         }
         public void SaveList(List<ProductModel> ProductList)
         {
-            using (StreamWriter write = new StreamWriter(_ProductFile, true))
+            ClearData();
+            using (StreamWriter write = new StreamWriter(_ProductFile, false))
             {
                 foreach (var i in ProductList)
                 {
@@ -61,12 +62,7 @@ namespace Buissness_Application.Repositries
                 product.product_available = GetField(details, 4);
                 string quantity = GetField(details, 5);
                 product.quantity = int.Parse(quantity);
-                product.product_sale_on = GetField(details, 6);
-                string discount = GetField(details, 7);
-                product.product_discount = int.Parse(discount);
-                string product_sale = GetField(details, 8);
-                product.product_sale = float.Parse(product_sale);
-                ProductList.Add(new ProductModel (product.product_name, product.product_price, product.product_code, product.product_available, product.quantity, product.product_sale_on, product.product_discount, product.product_sale));
+                ProductList.Add(new ProductModel (product.product_name, product.product_price, product.product_code, product.product_available, product.quantity));
             }
             read.Close();
             return ProductList;

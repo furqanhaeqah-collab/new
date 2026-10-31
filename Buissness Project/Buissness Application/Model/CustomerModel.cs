@@ -9,6 +9,7 @@ namespace Buissness_Application.Model
 {
     public class CustomerModel
     {
+        public string CustomerId;
         public string CustomerName;
         public string Address;
         public string ContactNo;
@@ -16,8 +17,9 @@ namespace Buissness_Application.Model
         public string ProductCode;
         public float ProductPrice;
         public CustomerModel () { }
-        public CustomerModel (string CustomerName, string Address, string ContactNo, int PostalCode, string ProductCode, float ProductPrice)
+        public CustomerModel (string CustomerId, string CustomerName, string Address, string ContactNo, int PostalCode, string ProductCode, float ProductPrice)
         {
+            this.CustomerId = CustomerId;
             this.CustomerName = CustomerName;
             this.Address = Address;
             this.ContactNo = ContactNo;
@@ -27,7 +29,7 @@ namespace Buissness_Application.Model
         }
         public override string ToString()
         {
-            return CustomerName + "," + Address + "," + ContactNo + "," + PostalCode + "," + ProductCode + "," + ProductPrice;
+            return CustomerId + "," + CustomerName + "," + Address + "," + ContactNo + "," + PostalCode + "," + ProductCode + "," + ProductPrice;
         }
     }
 }
