@@ -16,19 +16,18 @@ namespace Buissness_Application.UI
         public FeedbackUI()
         {
             _service = new FeedbackService();
-            FeedbackList = _service.ViewFeedbackService();
+            FeedbackList = _service.GetFeedback();
         }
-        public void SendFeedbackUI()
+        public void SendFeedbackUI(FeedbackModel review)
         {
             // Code for Send Feedback
-            FeedbackModel review = new FeedbackModel();
             Console.Write("Enter rating: ");
             review.rating = float.Parse(Console.ReadLine());
             Console.Write("Enter feedback: ");
             review.feedback = Console.ReadLine();
             Console.Write("Enter your name: ");
             review.name = Console.ReadLine();
-            _service.AddFeedbackService(review);
+            _service.AddFeedback(review);
         }
         public void ViewFeedback()
         {
@@ -44,7 +43,7 @@ namespace Buissness_Application.UI
         {
             Console.Write("Enter your name: ");
             string name = Console.ReadLine();
-            review = _service.FindFeddbackService(name);
+            review = _service.FindFeddbackByName(name);
             if(review == null)
             {
                 Console.WriteLine("Invalid name");
@@ -61,7 +60,7 @@ namespace Buissness_Application.UI
         {
             Console.Write("Enter your name: ");
             string name = Console.ReadLine();
-            review = _service.FindFeddbackService(name);
+            review = _service.FindFeddbackByName(name);
             if (review == null)
             {
                 Console.WriteLine("Invalid name");
@@ -69,7 +68,7 @@ namespace Buissness_Application.UI
             }
             else
             {
-                _service.DeleteFeedbackService(review);
+                _service.DeleteFeedback(review);
                 Console.WriteLine("Feedback deleted successfully");
             }
             Console.ReadKey();

@@ -18,17 +18,16 @@ namespace Buissness_Application.Service
             _repositry = new FeedbackRepositries();
             FeedbackList = _repositry.GetData();
         }
-        public void AddFeedbackService(FeedbackModel review)
+        public void AddFeedback(FeedbackModel review)
         {
             _repositry.SaveObject(review);
         }
-        public List<FeedbackModel> ViewFeedbackService()
+        public List<FeedbackModel> GetFeedback()
         {
             return _repositry.GetData();
         }
-        public FeedbackModel FindFeddbackService(string name)
+        public FeedbackModel FindFeddbackByName(string name)
         {
-            FeedbackModel review = new FeedbackModel();
             foreach(var feedback in FeedbackList)
             {
                 if(name == feedback.name)
@@ -38,7 +37,7 @@ namespace Buissness_Application.Service
             }
             return null;
         }
-        public void DeleteFeedbackService(FeedbackModel review)
+        public void DeleteFeedback(FeedbackModel review)
         {
             FeedbackList.Remove(review);
             _repositry.SaveList(FeedbackList);

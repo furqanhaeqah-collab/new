@@ -16,7 +16,7 @@ namespace Buissness_Application.UI
         public UserUI()
         {
             _service = new UserService();
-            UserList = _service.ViewUserService();
+            UserList = _service.GetUser();
         }
         public void MainHeaderUI()
         {

@@ -19,11 +19,11 @@ namespace Buissness_Application.Service
             _repositry = new CustomerRepositries();
             CustomerList = _repositry.GetData();
         }
-        public void AddCustomerCredentialsService(CustomerModel customer)
+        public void AddCustomer(CustomerModel customer)
         {
             _repositry.SaveObject(customer);
         }
-        public CustomerModel FindCustomerService(string Id)
+        public CustomerModel FindCustomer(string Id)
         {
             CustomerModel c = new CustomerModel();
             for (int i = 0; i < CustomerList.Count; i++)
@@ -35,7 +35,7 @@ namespace Buissness_Application.Service
             }
             return null;
         }
-        public void DeleteCustomerService(CustomerModel c)
+        public void DeleteCustomer(CustomerModel c)
         {
             CustomerList.Remove(c);
             _repositry.SaveList(CustomerList);

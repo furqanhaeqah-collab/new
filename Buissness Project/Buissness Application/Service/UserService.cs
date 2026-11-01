@@ -24,7 +24,7 @@ namespace Buissness_Application.Service
             UserList = _repositry.GetData();
             UserList.Add(user);
         }
-        public List<UserModel> ViewUserService()
+        public List<UserModel> GetUser()
         {
             return UserList = _repositry.GetData();
         }

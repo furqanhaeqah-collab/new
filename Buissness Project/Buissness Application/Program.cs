@@ -101,11 +101,6 @@ namespace Buissness_Application
                                         Console.Clear();
                                         _ProductUI.ViewSortedAscProductUI();
                                     }
-                                    //else if (option == 5)
-                                    //{
-                                    //    Console.Clear();
-                                    //    _ProductUI.ViewSaleProductUI();
-                                    //}
                                     else if (option == 5)
                                     {
                                         Console.Clear();
@@ -125,18 +120,6 @@ namespace Buissness_Application
                                 Console.Clear();
                                 _ProductUI.DeleteProductUI(product);
                             }
-                            //else if (ownerOption == "8")
-                            //{
-                            //    // Code for Add Sale on Product
-                            //    Console.Clear();
-                            //    _ProductUI.AddSaleOnProductUI(product);
-                            //}
-                            //else if (ownerOption == "9")
-                            //{
-                            //    // Code for Remove Sale on Product
-                            //    Console.Clear();
-                            //    _ProductUI.RemoveSaleOnProductUI(product);
-                            //}
                             else if (ownerOption == "8")
                             {
                                 // Code for View Feedback
@@ -207,11 +190,6 @@ namespace Buissness_Application
                                     Console.Clear();
                                     _ProductUI.ViewSortedAscProductUI();
                                 }
-                                //else if (option == 5)
-                                //{
-                                //    Console.Clear();
-                                //    _ProductUI.ViewSaleProductUI();
-                                //}
                                 else if (option == 5)
                                 {
                                     Console.Clear();
@@ -241,7 +219,7 @@ namespace Buissness_Application
                         {
                             // Code for Buy a Product
                             Console.Clear();
-                            _CustomerUI.BuyProductUI(customer);
+                            _CustomerUI.BuyProductUI(customer, product);
                         }
                         else if (customerOption == "5")
                         {
@@ -253,7 +231,7 @@ namespace Buissness_Application
                         {
                             // Code for Send Feedback
                             Console.Clear();
-                            _FeedbackUI.SendFeedbackUI();
+                            _FeedbackUI.SendFeedbackUI(review);
                         }
                         else if (customerOption == "7")
                         {
@@ -268,12 +246,6 @@ namespace Buissness_Application
                             _FeedbackUI.SearchFeedback(review);
                         }
                         else if (customerOption == "9")
-                        {
-                            // Code for View Feedback
-                            Console.Clear();
-                            _FeedbackUI.DeleteFeedback(review);
-                        }
-                        else if (customerOption == "10")
                         {
                             // Code for Exit Customer Menu
                             Console.Clear();
@@ -302,6 +274,7 @@ namespace Buissness_Application
                     _ProductUI.InvalidOption();
                 }
                 Console.WriteLine("Press any key to continue");
+                Console.ReadKey();
             }
             Console.Read();
         }

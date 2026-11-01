@@ -18,7 +18,7 @@ namespace Buissness_Application.UI
         public ProductUI()
         {
             _service = new ProductService();
-            productlist = _service.ViewProductService();
+            productlist = _service.GetProduct();
         }
         public void AddProductUI(ProductModel product)
         {
@@ -95,7 +95,6 @@ namespace Buissness_Application.UI
             }
             else
             {
-                productlist = _service.ViewProductService();
                 Console.WriteLine("Name\t\tPrice\tCode\tAvalaibility\tQuantity\tOn Sale\tDiscounted price");
                 Console.WriteLine(product.product_name + "\t" + product.product_price + "\t"
                      + product.product_code + "\t" + product.product_available + "\t\t"
@@ -121,58 +120,6 @@ namespace Buissness_Application.UI
             }
             Console.ReadKey();
         }
-        //public void AddSaleOnProductUI(ProductModel product)
-        //{
-        //    // Code to Add sale on product
-        //    Console.Write("Enter the product code: ");
-        //    string code = Console.ReadLine();
-        //    product = _service.FindByCode(code);
-        //    if (product == null)
-        //    {
-        //        Console.WriteLine("No product found");
-        //        Console.WriteLine("Invalid product code");
-        //    }
-        //    else
-        //    {
-        //        Console.Write("Enter the amount of discount: ");
-        //        product.product_discount = int.Parse(Console.ReadLine());
-        //        bool update_status  = _service.AddSaleService(product);
-        //        if(update_status == false)
-        //        {
-        //            Console.WriteLine("Discount is already applied to the product.");
-        //        }
-        //        else
-        //        {
-        //            Console.WriteLine("Discount  Applied now!");
-        //        }
-        //    }
-        //    Console.ReadKey();
-        //}
-        //public void RemoveSaleOnProductUI(ProductModel product)
-        //{
-        //    // Code to Remove sale on product
-        //    Console.Write("Enter the product code: ");
-        //    string code = Console.ReadLine();
-        //    product = _service.FindByCode(code);
-        //    if (product == null)
-        //    {
-        //        Console.WriteLine("No product found");
-        //        Console.WriteLine("Invalid product code");
-        //    }
-        //    else
-        //    {
-        //        bool delete_status = _service.RemoveSaleService(product);
-        //        if (delete_status == false)
-        //        {
-        //            Console.WriteLine("No Disscount is previously applied");
-        //        }
-        //        else
-        //        {
-        //            Console.WriteLine("Discount  Removed now!");
-        //        }
-        //    }
-        //    Console.ReadKey();
-        //}
         public int ViewProductMenuUI()
         {
             Console.WriteLine("----------------------------------");
@@ -237,7 +184,7 @@ namespace Buissness_Application.UI
         public void ViewSortedDescProductsUI()
         {
             Console.Clear();
-            productlist = _service.ViewSortedDescProductService();
+            productlist = _service.GetSortedDesc();
             for (int sort = 0; sort < productlist.Count; sort++)
             {
                 Console.WriteLine("Product Name\tProduct ID\tProduct Price\tProduct In Stock");
@@ -249,7 +196,7 @@ namespace Buissness_Application.UI
         public void ViewSortedAscProductUI()
         {
             Console.Clear();
-            productlist = _service.ViewSortedAscProductService();
+            productlist = _service.GetSortedAsc();
             for (int sort = 0; sort < productlist.Count; sort++)
             {
                 Console.WriteLine("Product Name\tProduct ID\tProduct Price\tProduct In Stock");
@@ -258,21 +205,6 @@ namespace Buissness_Application.UI
             }
             Console.ReadKey();
         }
-        //public void ViewSaleProductUI()
-        //{
-        //    Console.Clear();
-        //    for (int view_index = 0; view_index < productlist.Count; view_index++)
-        //    {
-        //        if (productlist[view_index].product_sale_on == "Yes")
-        //        {
-        //            Console.WriteLine("Name\t\tPrice\tCode\tOn Sale\tDiscounted Price");
-        //            Console.WriteLine(productlist[view_index].product_name + "\t" + productlist[view_index].product_price + "\t"
-        //                 + productlist[view_index].product_code + "\t\t" + productlist[view_index].product_sale_on 
-        //                 + "\t" + productlist[view_index].product_sale);
-        //        }
-        //    }
-        //    Console.ReadKey();
-        //}
         public void InStockProduct()
         {
             Console.Clear();

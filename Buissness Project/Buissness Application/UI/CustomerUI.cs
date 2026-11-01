@@ -41,16 +41,14 @@ namespace Buissness_Application.UI
             Console.WriteLine("6.Send Feedback");
             Console.WriteLine("7.View Feedback");
             Console.WriteLine("8.Search Feedback");
-            Console.WriteLine("9.Delete Feedback");
-            Console.WriteLine("10.Exit");
+            Console.WriteLine("9.Exit");
             Console.Write("Enter your choice: ");
             string customer_choice = Console.ReadLine();
             return customer_choice;
         }
-        public void BuyProductUI(CustomerModel customer)
+        public void BuyProductUI(CustomerModel customer, ProductModel product)
         {
             // Code for Bying
-            ProductModel product = new ProductModel();
             Console.Write("Enter the product code: ");
             string code = Console.ReadLine();
             product = _PService.FindByCode(code);
@@ -76,7 +74,7 @@ namespace Buissness_Application.UI
                 customer.ContactNo = Console.ReadLine();
                 Console.Write("Enter your postal code: ");
                 customer.PostalCode = int.Parse(Console.ReadLine());
-                _service.AddCustomerCredentialsService(customer);
+                _service.AddCustomer(customer);
                 Console.WriteLine("Product ordered successfully");
             }
         }
@@ -85,7 +83,7 @@ namespace Buissness_Application.UI
             // Code for Track Order
             Console.WriteLine("Enter Customer Id: ");
             string Id = Console.ReadLine();
-            customer = _service.FindCustomerService(Id);
+            customer = _service.FindCustomer(Id);
             if (customer == null)
             {
                 Console.WriteLine("Invalid credentials");
@@ -93,7 +91,7 @@ namespace Buissness_Application.UI
             }
             else
             {
-                _service.DeleteCustomerService(customer);
+                _service.DeleteCustomer(customer);
                 Console.WriteLine("Order Cancelled Succesfully");
             }
         }

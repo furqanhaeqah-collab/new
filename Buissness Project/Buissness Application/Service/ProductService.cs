@@ -78,40 +78,15 @@ namespace Buissness_Application.Service
             ProductList.Remove(product);
             _repositry.SaveList(ProductList);
         }
-        //public bool AddSaleService(ProductModel product)
-        //{
-        //    int i = FindProductIndex(product);
-        //    ProductList[i].product_sale_on = "Yes";
-        //    ProductList[i].product_discount = product.product_discount;
-        //    ProductList[i].product_sale = ProductList[i].product_price - (ProductList[i].product_price * (product.product_discount / 100));
-        //    _repositry.SaveList(ProductList);
-        //    return true;
-        //}
-        //public bool RemoveSaleService(ProductModel product)
-        //{
-        //    int i = FindProductIndex(product);
-        //    if (ProductList[i].product_sale_on == "Yes")
-        //    {
-        //        ProductList[i].product_sale_on = "No";
-        //        ProductList[i].product_discount = 0;
-        //        ProductList[i].product_sale = ProductList[i].product_price;
-        //        _repositry.SaveList(ProductList);
-        //        return true;
-        //    }
-        //    else
-        //    {
-        //        return false;
-        //    }
-        //}
-        public List<ProductModel> ViewProductService()
+        public List<ProductModel> GetProduct()
         {
             return ProductList = _repositry.GetData();
         }
-        public List<ProductModel> ViewSortedDescProductService()
+        public List<ProductModel> GetSortedDesc()
         {
             return  ProductList = ProductList.OrderByDescending(p => p.product_price).ToList();
         }
-        public List<ProductModel> ViewSortedAscProductService()
+        public List<ProductModel> GetSortedAsc()
         {
             return ProductList = ProductList.OrderBy(p => p.product_price).ToList();
         }
